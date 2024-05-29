@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/*=============================================
+=                  MARK:Colores                   
+=============================================*/
+/* SCSS HEX */
+/* SCSS Gradient */
+/*=============================================
+=                MARK:Estilos Base                   
+=============================================*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Quicksand:wght@300..700&family=REM&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #221e22;
+  overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+/*=============================================
+=                 MARK:Breakpoints                  
+=============================================*/
+/*============  End of Breakpoints  =============*/
+/*=============================================
+=                   MARK:Navbar                   
+=============================================*/
+nav {
+  background-color: #31263e;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+
+.contenedor_nav {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contenedor_nav ul {
+  list-style: none;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+.contenedor_nav .link {
+  text-decoration: none;
+  color: #a381d7;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (hover: hover) {
+  .contenedor_nav .link:hover {
+    color: #f27a51;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+}
+.contenedor_nav .titulo {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #946ed0;
+}
+.contenedor_nav .titulo_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+.contenedor_nav .titulo_nav img {
+  width: 3.5em;
+}
+
+/*=============================================
+=                MARK:Enlaces Móvil                  
+=============================================*/
+.enlaces_nav_movil {
+  position: fixed;
+  width: 200px;
+  right: -100%;
+  background-color: #31263e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  border-radius: 10px 0px 0px 10px;
+  z-index: 20;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+.enlaces_nav_movil ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  font-size: 1.2em;
+}
+.enlaces_nav_movil li {
+  padding-top: clamp(15px, 25%, 35px);
+  padding-bottom: clamp(15px, 25%, 35px);
+  text-align: center;
+}
+.enlaces_nav_movil a {
+  color: #a381d7;
+  text-decoration: none;
+}
+.enlaces_nav_movil.animar {
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+  right: 0;
+}
+
+.oscurecer_fondo {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+  z-index: 10;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.oscurecer_fondo.mostrar {
+  visibility: visible;
+  opacity: 100;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+/*============  End of Enlaces Móvil  =============*/
+/*=============================================
+=             MARK:Menú Hamburguesa                   
+=============================================*/
+.hamburguesa {
+  cursor: pointer;
+}
+.hamburguesa .linea {
+  width: 30px;
+  height: 3px;
+  background-color: #946ed0;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+.hamburguesa .linea:last-child {
+  margin-bottom: 0;
+}
+.hamburguesa.activo .linea:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa.activo .linea:nth-child(2) {
+  opacity: 0;
+}
+.hamburguesa.activo .linea:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/*=============================================
+=                   MARK:Resposive                  
+=============================================*/
+@media (width < 770px) {
+  .enlaces_nav {
+    display: none;
+  }
+}
+@media (width >= 770px) {
+  .hamburguesa,
+  .enlaces_nav_movil {
+    display: none;
+  }
+}
+@media (width < 545px) {
+  .titulo_nav {
+    font-size: 0.6em;
+  }
+  .enlaces_nav_movil ul {
+    font-size: 1em;
+  }
+}
+/*============  End of Resposive  =============*/

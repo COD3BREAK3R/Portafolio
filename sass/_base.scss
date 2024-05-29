@@ -1,0 +1,64 @@
+/*=============================================
+=                  MARK:Colores                   
+=============================================*/
+
+/* SCSS HEX */
+$purpura-logo  : #7847c4;
+$english-violet: #44355bff;
+$dark-purple   : #31263eff;
+$raisin-black  : #221e22ff;
+$hunyadi-yellow: #eca72cff;
+$flame         : #ee5622ff;
+
+/* SCSS Gradient */
+$gradient-top         : linear-gradient(0deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-right       : linear-gradient(90deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-bottom      : linear-gradient(180deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-left        : linear-gradient(270deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-top-right   : linear-gradient(45deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-bottom-right: linear-gradient(135deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-top-left    : linear-gradient(225deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-bottom-left : linear-gradient(315deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradient-radial      : radial-gradient(#44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+
+/*=============================================
+=                MARK:Estilos Base                   
+=============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Quicksand:wght@300..700&family=REM&display=swap');
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+
+
+    font-family        : "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style         : normal;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: $raisin-black;
+    overflow-x      : hidden;
+
+    
+}
+
+html{
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/*=============================================
+=                 MARK:Breakpoints                  
+=============================================*/
+
+$xs: 360px; // Extra small devices | Portrait phones (<34em : 22.5em)
+$sm: 545px; // Small devices | Landscape phones (≥34em)
+$md: 770px; // Medium devices | Tablets (≥48em)
+$lg: 990px; // Large devices | Desktops (≥62em)
+
+/*============  End of Breakpoints  =============*/

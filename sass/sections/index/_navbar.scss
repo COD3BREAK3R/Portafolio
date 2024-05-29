@@ -1,0 +1,193 @@
+/*=============================================
+=                   MARK:Navbar                   
+=============================================*/
+
+nav {
+    background-color: $dark-purple;
+    padding         : 20px;
+    display         : flex;
+    justify-content : center;
+
+    position: fixed;
+    top     : 0;
+    width   : 100%;
+    z-index : 15;
+
+}
+
+.contenedor_nav {
+    width          : 1200px;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+
+
+    ul {
+        list-style: none;
+        font-size : 1.2em;
+        display   : flex;
+        gap       : 1em;
+    }
+
+    .link {
+        text-decoration: none;
+        color          : lighten($purpura-logo, 15);
+        transition     : color 0.3s;
+
+        @media (hover: hover) {
+            &:hover {
+                color     : lighten($flame, 10);
+                transition: color 0.3s;
+            }
+        }
+
+    }
+
+    .titulo {
+        font-size: 1.3em;
+        cursor   : pointer;
+        color    : lighten($purpura-logo, 10);
+
+    }
+
+    .titulo_nav {
+        display    : flex;
+        align-items: center;
+        gap        : 1em;
+
+        img {
+            width: 3.5em;
+        }
+    }
+}
+
+/*=============================================
+=                MARK:Enlaces Móvil                  
+=============================================*/
+
+.enlaces_nav_movil {
+    position        : fixed;
+    width           : 200px;
+    right           : -100%;
+    background-color: $dark-purple;
+    display         : flex;
+    justify-content : center;
+    padding         : 5px;
+    border-radius   : 10px 0px 0px 10px;
+    z-index         : 20;
+    transition      : right 0.5s;
+
+    ul {
+        display       : flex;
+        flex-direction: column;
+        list-style    : none;
+        font-size     : 1.2em;
+
+    }
+
+    li {
+        padding-top   : clamp(15px, 25%, 35px);
+        padding-bottom: clamp(15px, 25%, 35px);
+        text-align    : center;
+    }
+
+    a {
+        color          : lighten($purpura-logo, 15);
+        text-decoration: none;
+    }
+
+    &.animar {
+        transition: right 0.5s;
+        right     : 0;
+    }
+}
+
+.oscurecer_fondo {
+    visibility      : hidden;
+    opacity         : 0;
+    width           : 100%;
+    height          : 100vh;
+    position        : fixed;
+    background-color: #0000009f;
+    z-index         : 10;
+    overflow        : hidden;
+    transition      : all 0.3s;
+
+
+    &.mostrar {
+        visibility: visible;
+        opacity   : 100;
+    }
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+/*============  End of Enlaces Móvil  =============*/
+
+/*=============================================
+=             MARK:Menú Hamburguesa                   
+=============================================*/
+
+.hamburguesa {
+    cursor: pointer;
+
+    .linea {
+        width           : 30px;
+        height          : 3px;
+        background-color: lighten($purpura-logo, 10);
+        margin-bottom   : 5px;
+        border-radius   : 2px;
+        transition      : transform 0.3s, opacity 0.3s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.activo {
+        .linea:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .linea:nth-child(2) {
+            opacity: 0;
+        }
+
+        .linea:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+}
+
+/*=============================================
+=                   MARK:Resposive                  
+=============================================*/
+
+@media (width < #{$md}) {
+    .enlaces_nav {
+        display: none;
+    }
+}
+
+@media (width >=#{$md}) {
+
+    .hamburguesa,
+    .enlaces_nav_movil {
+        display: none;
+    }
+}
+
+@media (width < #{$sm}) {
+
+    .titulo_nav {
+        font-size: 0.6em;
+    }
+
+    .enlaces_nav_movil ul {
+        font-size: 1em;
+    }
+}
+
+/*============  End of Resposive  =============*/

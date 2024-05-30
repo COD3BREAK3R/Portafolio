@@ -4,52 +4,51 @@
 
 /* SCSS HEX */
 $purpura-logo  : #7847c4;
+
 $english-violet: #44355bff;
 $dark-purple   : #31263eff;
 $raisin-black  : #221e22ff;
 $hunyadi-yellow: #eca72cff;
 $flame         : #ee5622ff;
 
+$blanco               : #eeeeeecc;
+
 /* SCSS Gradient */
-$gradient-top         : linear-gradient(0deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-right       : linear-gradient(90deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-bottom      : linear-gradient(180deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-left        : linear-gradient(270deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-top-right   : linear-gradient(45deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-bottom-right: linear-gradient(135deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-top-left    : linear-gradient(225deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-bottom-left : linear-gradient(315deg, #44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
-$gradient-radial      : radial-gradient(#44355bff, #31263eff, #221e22ff, #eca72cff, #ee5622ff);
+$gradiente-fondo: linear-gradient(0deg, rgba(34, 30, 34, 1) 0%, rgba(49, 38, 62, 1) 70%);
 
 /*=============================================
 =                MARK:Estilos Base                   
 =============================================*/
-@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Quicksand:wght@300..700&family=REM&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap');
 
 * {
     margin    : 0;
     padding   : 0;
     box-sizing: border-box;
 
-
-    font-family        : "Outfit", sans-serif;
+    font-family        : 'REM', sans-serif;
     font-optical-sizing: auto;
     font-style         : normal;
 
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    background-color: $raisin-black;
-    overflow-x      : hidden;
 
-    
-}
-
-html{
+html {
     ::-webkit-scrollbar {
         display: none;
     }
+}
+
+body {
+    background-color: $raisin-black;
+    overflow-x      : hidden;
+    display         : flex;
+    justify-content : center;
+}
+
+main {
+    width: 100%;
 }
 
 /*=============================================

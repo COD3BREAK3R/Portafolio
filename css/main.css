@@ -7,25 +7,35 @@
 /*=============================================
 =                MARK:Estilos Base                   
 =============================================*/
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Quicksand:wght@300..700&family=REM&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
+  font-family: "REM", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   -webkit-tap-highlight-color: transparent;
 }
 
+html ::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #221e22;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-html ::-webkit-scrollbar {
-  display: none;
+main {
+  width: 100%;
 }
 
 /*=============================================
@@ -99,6 +109,7 @@ nav {
 }
 .contenedor_nav .titulo_nav img {
   width: 3.5em;
+  aspect-ratio: 14/9;
 }
 
 /*=============================================
@@ -168,7 +179,6 @@ nav {
   overflow: hidden;
 }
 
-/*============  End of Enlaces Móvil  =============*/
 /*=============================================
 =             MARK:Menú Hamburguesa                   
 =============================================*/
@@ -202,7 +212,7 @@ nav {
 }
 
 /*=============================================
-=                   MARK:Resposive                  
+=                  MARK:Responsive                  
 =============================================*/
 @media (width < 770px) {
   .enlaces_nav {
@@ -224,3 +234,137 @@ nav {
   }
 }
 /*============  End of Resposive  =============*/
+/*=============================================
+=                MARK:Estulos Header                   
+=============================================*/
+header {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(34, 30, 34)), color-stop(70%, rgb(49, 38, 62)));
+  background: linear-gradient(0deg, rgb(34, 30, 34) 0%, rgb(49, 38, 62) 70%);
+  color: rgba(238, 238, 238, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header section {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header section img {
+  max-width: 50%;
+  aspect-ratio: 568/595;
+}
+header .contenedor_texto_header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+header .contenedor_texto_header h2 {
+  text-align: center;
+  font-size: clamp(1.5em, 3.5vw, 50px);
+}
+header .contenedor_texto_header p {
+  margin-top: clamp(1em, 3.5vw, 80px);
+  margin-bottom: clamp(1em, 3.5vw, 80px);
+  font-size: clamp(1em, 1.05vw, 25px);
+}
+header .contenedor_texto_header .contenedor_botones_header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+header .contenedor_texto_header .contenedor_botones_header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1.1em;
+  border-radius: 50px;
+  height: 2.5em;
+  border: none;
+  cursor: pointer;
+  color: rgba(238, 238, 238, 0.8);
+}
+header .contenedor_texto_header .contenedor_botones_header button.contactame {
+  background-color: #552e90;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+header .contenedor_texto_header .contenedor_botones_header button.contactame:hover {
+  background-color: #6034a4;
+}
+header .contenedor_texto_header .contenedor_botones_header button.descargar_cv {
+  background-color: transparent;
+  border: solid #6034a4;
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+}
+header .contenedor_texto_header .contenedor_botones_header button.descargar_cv:hover {
+  border: solid #6b3bb7;
+}
+
+/*=============================================
+=                 MARK:Responsive                 
+=============================================*/
+@media (width <= 1238px) {
+  header section {
+    padding: 20px;
+  }
+}
+@media (width <= 770px) {
+  header section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  header .contenedor_texto_header {
+    margin-right: 0px;
+  }
+  header section img {
+    max-width: 70%;
+  }
+}
+@media (width <= 360px) {
+  header section img {
+    max-width: 100%;
+  }
+  .contenedor_botones_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*============  End of Responsive  =============*/

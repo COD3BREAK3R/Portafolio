@@ -12,7 +12,6 @@ nav {
     top     : 0;
     width   : 100%;
     z-index : 15;
-
 }
 
 .contenedor_nav {
@@ -40,7 +39,6 @@ nav {
                 transition: color 0.3s;
             }
         }
-
     }
 
     .titulo {
@@ -57,6 +55,7 @@ nav {
 
         img {
             width: 3.5em;
+            aspect-ratio: 14/9;
         }
     }
 }
@@ -124,8 +123,6 @@ nav {
     overflow: hidden;
 }
 
-/*============  End of Enlaces Móvil  =============*/
-
 /*=============================================
 =             MARK:Menú Hamburguesa                   
 =============================================*/
@@ -162,7 +159,7 @@ nav {
 }
 
 /*=============================================
-=                   MARK:Resposive                  
+=                  MARK:Responsive                  
 =============================================*/
 
 @media (width < #{$md}) {

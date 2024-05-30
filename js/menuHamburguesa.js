@@ -20,7 +20,7 @@ hamburguesa.addEventListener("click", () => {
 =============================================*/
 
 const nav = document.querySelector("nav");
-const main = document.querySelector('main');;
+const main = document.querySelector('main');
 
 const calcularAlturaOscurecerFondo = () => {
     const alturaNav = nav.offsetHeight;

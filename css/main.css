@@ -5,6 +5,9 @@
 /* SCSS HEX */
 /* SCSS Gradient */
 /*=============================================
+=                 MARK:Breakpoints                  
+=============================================*/
+/*=============================================
 =                MARK:Estilos Base                   
 =============================================*/
 @import url("https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap");
@@ -32,6 +35,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: rgba(238, 238, 238, 0.8);
 }
 
 main {
@@ -39,9 +43,22 @@ main {
 }
 
 /*=============================================
-=                 MARK:Breakpoints                  
+=         MARK:REsponsive Espacio                 
 =============================================*/
-/*============  End of Breakpoints  =============*/
+@media (width <= 1238px) {
+  header section,
+  .portafolio {
+    padding: 20px;
+  }
+}
+@media (width <= 360px) {
+  nav {
+    padding: 20px;
+  }
+  header section, .portafolio {
+    padding: 10px;
+  }
+}
 /*=============================================
 =                   MARK:Navbar                   
 =============================================*/
@@ -57,7 +74,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 15;
+  z-index: 100;
 }
 
 .contenedor_nav {
@@ -88,7 +105,7 @@ nav {
 }
 @media (hover: hover) {
   .contenedor_nav .link:hover {
-    color: #f27a51;
+    color: #bfa8e3;
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
   }
@@ -234,13 +251,60 @@ nav {
   }
 }
 /*============  End of Resposive  =============*/
+.boton, .boton_secundario, .portafolio_card .portafolio_botones .botones_ver button, header .contenedor_texto_header .contenedor_botones_header button.descargar_cv, .boton_principal, .portafolio_card .portafolio_botones button, header .contenedor_texto_header .contenedor_botones_header button.contactame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 1.1em;
+  border-radius: 50px;
+  min-height: 2.5em;
+  border: none;
+  cursor: pointer;
+  color: rgba(238, 238, 238, 0.8);
+  -webkit-box-shadow: 0px 0px 0px 0px #7847c4;
+          box-shadow: 0px 0px 0px 0px #7847c4;
+}
+.boton a, .boton_secundario a, .portafolio_card .portafolio_botones .botones_ver button a, header .contenedor_texto_header .contenedor_botones_header button.descargar_cv a, .boton_principal a, .portafolio_card .portafolio_botones button a, header .contenedor_texto_header .contenedor_botones_header button.contactame a {
+  text-decoration: none;
+  color: rgba(238, 238, 238, 0.8);
+}
+
+.boton_principal, .portafolio_card .portafolio_botones button, header .contenedor_texto_header .contenedor_botones_header button.contactame {
+  background-color: #552e90;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.boton_principal:hover, .portafolio_card .portafolio_botones button:hover, header .contenedor_texto_header .contenedor_botones_header button.contactame:hover {
+  background-color: #6b3bb7;
+}
+
+.boton_secundario, .portafolio_card .portafolio_botones .botones_ver button, header .contenedor_texto_header .contenedor_botones_header button.descargar_cv {
+  background-color: transparent;
+  border: solid #6034a4;
+  -webkit-transition: border, -webkit-box-shadow 0.5s;
+  transition: border, -webkit-box-shadow 0.5s;
+  transition: border, box-shadow 0.5s;
+  transition: border, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+.boton_secundario:hover, .portafolio_card .portafolio_botones .botones_ver button:hover, header .contenedor_texto_header .contenedor_botones_header button.descargar_cv:hover {
+  border: solid #6b3bb7;
+  -webkit-box-shadow: 0px 0px 10px 0px #7847c4;
+          box-shadow: 0px 0px 10px 0px #7847c4;
+}
+
 /*=============================================
 =                MARK:Estulos Header                   
 =============================================*/
 header {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(34, 30, 34)), color-stop(70%, rgb(49, 38, 62)));
-  background: linear-gradient(0deg, rgb(34, 30, 34) 0%, rgb(49, 38, 62) 70%);
-  color: rgba(238, 238, 238, 0.8);
+  background: -webkit-gradient(linear, left bottom, left top, from(#221e22), color-stop(70%, #31263e));
+  background: linear-gradient(0deg, #221e22 0%, #31263e 70%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,50 +361,9 @@ header .contenedor_texto_header .contenedor_botones_header {
   display: flex;
   gap: 15px;
 }
-header .contenedor_texto_header .contenedor_botones_header button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  font-size: 1.1em;
-  border-radius: 50px;
-  height: 2.5em;
-  border: none;
-  cursor: pointer;
-  color: rgba(238, 238, 238, 0.8);
-}
-header .contenedor_texto_header .contenedor_botones_header button.contactame {
-  background-color: #552e90;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-header .contenedor_texto_header .contenedor_botones_header button.contactame:hover {
-  background-color: #6034a4;
-}
-header .contenedor_texto_header .contenedor_botones_header button.descargar_cv {
-  background-color: transparent;
-  border: solid #6034a4;
-  -webkit-transition: border 0.5s;
-  transition: border 0.5s;
-}
-header .contenedor_texto_header .contenedor_botones_header button.descargar_cv:hover {
-  border: solid #6b3bb7;
-}
-
 /*=============================================
 =                 MARK:Responsive                 
 =============================================*/
-@media (width <= 1238px) {
-  header section {
-    padding: 20px;
-  }
-}
 @media (width <= 770px) {
   header section {
     -webkit-box-orient: vertical;
@@ -368,3 +391,279 @@ header .contenedor_texto_header .contenedor_botones_header button.descargar_cv:h
   }
 }
 /*============  End of Responsive  =============*/
+.portafolio_contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../img/fondo2.png");
+  background-repeat: repeat space;
+}
+
+.portafolio {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 1200px;
+}
+.portafolio h2 {
+  font-size: 2.5em;
+  color: #865aca;
+}
+.portafolio .portafolio_parrafo_intro {
+  font-size: 1.2em;
+}
+.portafolio h2,
+.portafolio div {
+  text-align: center;
+}
+.portafolio .contenedor_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  -webkit-perspective: 2800;
+          perspective: 2800;
+}
+
+.portafolio_card {
+  background-color: #31263e;
+  padding: 15px;
+  border-radius: 15px;
+  width: 48%;
+  max-width: 400px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.portafolio_card .contenedor_header_tecnologias {
+  z-index: -10;
+}
+.portafolio_card .portafolio_header p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+.portafolio_card .portafolio_header img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 185/139;
+  border-radius: 15px;
+}
+.portafolio_card .portafolio_header .imagen_card {
+  position: relative;
+}
+.portafolio_card .portafolio_header .tipo {
+  bottom: 0;
+  margin: 3.5%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  padding: 5px;
+  font-size: 0.85em;
+}
+@media (width > 650px) {
+  .portafolio_card .portafolio_header .tipo.left {
+    right: 0;
+  }
+}
+.portafolio_card .portafolio_tecnologias {
+  margin-bottom: 30px;
+}
+.portafolio_card .portafolio_tecnologias p {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.portafolio_card .portafolio_tecnologias .etiquetas_tecnologias {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+.portafolio_card .portafolio_botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.portafolio_card .portafolio_botones .botones_ver {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.portafolio_card .portafolio_botones .botones_ver button {
+  width: 50%;
+}
+.portafolio_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: -10;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 0;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.portafolio_back p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.portafolio_back .contenedor_portafolio_back {
+  overflow: hidden;
+}
+.portafolio_back .contenido_back {
+  text-align: left;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+.portafolio_back .contenedor_texto_back {
+  max-height: calc(100% - 2.7em);
+  overflow: scroll;
+}
+.portafolio_back button {
+  margin-top: 20px;
+}
+
+/*=============================================
+=               MARK:Responsive                   
+=============================================*/
+@media (width < 770px) {
+  .portafolio h2 {
+    font-size: 1.8em;
+  }
+  .portafolio .portafolio_parrafo_intro {
+    font-size: 1em;
+  }
+  .portafolio .portafolio_header p {
+    font-size: 1.1em;
+  }
+  .portafolio .portafolio_tecnologias p {
+    font-size: 1em;
+  }
+  .portafolio .contenedor_cards {
+    gap: 10px;
+  }
+  .portafolio_card .portafolio_botones .botones_ver {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .portafolio_card .portafolio_botones .botones_ver button {
+    font-size: 1em;
+    width: 100%;
+  }
+  .portafolio_card .portafolio_botones button {
+    font-size: 1em;
+  }
+  .portafolio_back p {
+    font-size: 1.1em;
+  }
+  .portafolio_back button {
+    font-size: 1em;
+  }
+}
+@media (width <= 650px) {
+  .portafolio_card {
+    width: 100%;
+  }
+  .portafolio .contenedor_cards {
+    gap: 20px;
+  }
+}
+@media (width < 360px) {
+  .portafolio_card {
+    padding: 10px;
+  }
+  .portafolio_card .portafolio_header .imagen_card {
+    position: relative;
+  }
+  .portafolio_card .portafolio_header .tipo {
+    font-size: 0.7em;
+  }
+}
+/*============  End of Responsive  =============*/
+.lenguaje {
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 7px 25px 7px 25px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2em;
+  background-color: #44355b;
+}
+.lenguaje img {
+  width: 1.5em;
+}

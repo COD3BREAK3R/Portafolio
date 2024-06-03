@@ -1,10 +1,50 @@
+.boton {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 100%;
+    font-size      : 1.1em;
+    border-radius  : 50px;
+    min-height     : 2.5em;
+    border         : none;
+    cursor         : pointer;
+    color          : $blanco;
+    box-shadow     : 0px 0px 0px 0px $purpura-logo;
+
+    a {
+        text-decoration: none;
+        color          : $blanco
+    }
+}
+
+.boton_principal {
+    @extend .boton;
+    background-color: darken($purpura-logo, 15);
+    transition      : background-color 0.5s;
+
+    &:hover {
+        background-color: darken($purpura-logo, 5);
+    }
+}
+
+.boton_secundario {
+    @extend .boton;
+    background-color: transparent;
+    border          : solid darken($purpura-logo, 10);
+    transition      : border, box-shadow 0.5s;
+
+    &:hover {
+        border    : solid darken($purpura-logo, 5);
+        box-shadow: 0px 0px 10px 0px $purpura-logo;
+    }
+}
+
 /*=============================================
 =                MARK:Estulos Header                   
 =============================================*/
 
 header {
     background     : $gradiente-fondo;
-    color          : $blanco;
     display        : flex;
     justify-content: center;
 
@@ -47,36 +87,14 @@ header {
             gap    : 15px;
 
             button {
-                display        : flex;
-                justify-content: center;
-                align-items    : center;
-                width          : 100%;
-                font-size      : 1.1em;
-                border-radius  : 50px;
-                height         : 2.5em;
-                border         : none;
-                cursor         : pointer;
-                color          : $blanco;
-
 
                 &.contactame {
-                    background-color: darken($purpura-logo, 15);
-                    transition      : background-color 0.5s;
-
-                    &:hover {
-                        background-color: darken($purpura-logo, 10);
-                    }
+                    @extend .boton_principal;
                 }
 
 
                 &.descargar_cv {
-                    background-color: transparent;
-                    border          : solid darken($purpura-logo, 10);
-                    transition      : border 0.5s;
-
-                    &:hover {
-                        border: solid darken($purpura-logo, 5);
-                    }
+                    @extend .boton_secundario;
                 }
             }
         }
@@ -86,13 +104,6 @@ header {
 /*=============================================
 =                 MARK:Responsive                 
 =============================================*/
-
-@media (width <=1238px) {
-    header section {
-        padding: 20px;
-    }
-}
-
 
 @media (width <=#{$md}) {
     header section {

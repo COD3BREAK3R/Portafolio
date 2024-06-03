@@ -11,7 +11,7 @@ nav {
     position: fixed;
     top     : 0;
     width   : 100%;
-    z-index : 15;
+    z-index : 100;
 }
 
 .contenedor_nav {
@@ -35,7 +35,7 @@ nav {
 
         @media (hover: hover) {
             &:hover {
-                color     : lighten($flame, 10);
+                color     : lighten($purpura-logo, 25);
                 transition: color 0.3s;
             }
         }

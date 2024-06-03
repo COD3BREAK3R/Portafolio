@@ -29,6 +29,7 @@
                     <li><a href="#" class="link">Sobre Mí</a></li>
                 </ul>
             </div>
+
             <!-- Fin Enlaces Navbar -->
 
             <!-- Menú Hamburguesa -->
@@ -67,7 +68,7 @@
                     <!-- Contenedor Título Párrafo -->
                     <div>
                         <h2>Hola, soy Desarrollador Web Full Stack</h2>
-                        
+
                         <p>Estoy listo para convertir tus ideas en realidad.
                             Con una combinación de creatividad y experiencia técnica, puedo crear soluciones digitales
                             de
@@ -82,30 +83,467 @@
                         </p>
                     </div>
                     <!-- Fin Contenedor Título Párrafo -->
-                    
+
                     <!-- Botones Header -->
                     <div class="contenedor_botones_header">
-                        <button type="button" class="contactame">Contáctame</button>
-                        
-                        <button type="button" class="descargar_cv">Descargar CV</button>
+                        <button type="button" class="contactame"><a href="#a">Contáctame</a></button>
+
+                        <button type="button" class="descargar_cv"><a href="#a">Descargar CV</a></button>
                     </div>
                     <!-- Fin Botones Header -->
                 </div>
                 <!-- Fin Contenedor Textos Header -->
-                
-                <img src="./img/imagenBanner2x.png" alt="Imagen del banner">
-                
+
+                <img src="./img/Recurso 1@2x-8.png" alt="Imagen del banner">
+
             </section>
             <!-- Fin Section Header -->
         </header>
         <!-- Fin Header -->
 
-        
+        <!-- Contenedor Portafolio -->
+        <div class="portafolio_contenedor">
+            <!-- Portafolio -->
+            <section class="portafolio">
+
+                <!-- Título Portafolio -->
+                <div>
+                    <h2>Portafolio</h2>
+                    <div class="portafolio_parrafo_intro">
+                        Aquí muestro algunos de los proyectos que he creado desde cero para mostrar algunas de mis
+                        habilidades como
+                        desarrollador
+                    </div>
+                </div>
+                <!-- Fin Título Portafolio -->
+
+                <div class="contenedor_cards">
+
+                    <!-- Inicio Card Portafolio-->
+                    <div class="portafolio_card">
+
+                        <div class="contenedor_header_tecnologias">
+                            <!-- Header Card -->
+                            <div class="portafolio_header">
+                                <p>SuperKeys</p>
+                                <div class="imagen_card">
+                                    <img src="./img/login_php.jpg">
+                                    <div class="tipo">Demo</div>
+                                </div>
+                            </div>
+                            <!-- Fin Header Card -->
+
+                            <!-- Tecnologías Card -->
+                            <div class="portafolio_tecnologias">
+                                <p>Tecnologías utilizadas:</p>
+
+                                <div class="etiquetas_tecnologias">
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/html5-original.svg" alt="logo de html">
+                                        <div>HTML</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/sass-original.svg" alt="logo de html">
+                                        <div>SASS</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/javascript-original.svg" alt="logo de html">
+                                        <div>JavaScript</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/php-original.svg" alt="logo de html">
+                                        <div>PHP</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/mysql-original.svg">
+                                        <div>MySQL</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- Fin Tecnologías Card -->
+                        </div>
+
+                        <!-- Botones Card -->
+                        <div class="portafolio_botones">
+
+                            <div class="botones_ver">
+                                <button><a href="#a">Ver Proyecto</a></button>
+                                <button><a href="#a">Ver Código</a></button>
+                            </div>
+
+                            <button class="leerMas">Mostrar Descripción</button>
+                        </div>
+                        <!-- Fin Botones Card -->
+
+                        <!-- Parte trasera de la tarjeta -->
+                        <div class="portafolio_back">
+                            <!-- Parte superior trasera -->
+                            <div class="contenedor_portafolio_back">
+                                <p>Descripción</p>
+                                <div class="contenedor_texto_back">
+                                    <div class="contenido_back">
+                                        Este es un proyecto de demostración donde pongo hago uso de la validación de los
+                                        datos de un formulario mediante JavaScript, hago envío de peticiones al servidor
+                                        de
+                                        PHP
+                                        utilizando Fetch y este valida los datos recibidos antes de proceder a
+                                        insertarlos en la base de datos, también existe un manejo de errores para
+                                        informar
+                                        al usuario de los problemas mediante un modal. Además tomo medidas de seguridad
+                                        tales como:
+                                        <br><br>
+                                        <ul>
+                                            <li> - Preparar sentencias SQL para prevenir ataques de inyección SQL.</li>
+                                            <br>
+                                            <li> - Generación de un token CSRF para evitar que el back-end reciba
+                                                consultas
+                                                de dominios no autorizados y este se guarda en una cookie HTTP Only para
+                                                evitar que scripts maliciosos puedan leerla.</li>
+                                            <br>
+                                            <li> - Se realiza un encriptado de las contraseñas para evitar que se
+                                                almacenen
+                                                como texto plano en la base de datos.</li>
+                                            <br>
+                                            <li> - Se valida la sesión del usuario antes de acceder al generador de
+                                                claves y
+                                                también se verifica que la clave que intenta eliminar le pertenezca,
+                                                entre
+                                                otras validaciones que se pueden ver revisando el código
+                                            </li>
+                                        </ul>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Parte superior trasera -->
+
+                            <!-- Botón Parte Trasera -->
+                            <div>
+                                <button class="boton_principal volver_atras">
+                                    Volver Atrás
+                                </button>
+                            </div>
+                            <!-- Fin Botón Parte Trasera -->
+                        </div>
+                        <!-- Fin Parte trasera de la tarjeta -->
+                    </div>
+                    <!-- Fin Card Portafolio -->
+
+                    <!-- Inicio Card Portafolio-->
+                    <div class="portafolio_card">
+
+                        <div class="contenedor_header_tecnologias">
+                            <!-- Header Card -->
+                            <div class="portafolio_header">
+                                <p>Live Dinner</p>
+                                <div class="imagen_card">
+                                    <img src="./img/web_restaurante2.jpg">
+                                    <div class="tipo left">Demo</div>
+                                </div>
+                            </div>
+                            <!-- Fin Header Card -->
+
+                            <!-- Tecnologías Card -->
+                            <div class="portafolio_tecnologias">
+                                <p>Tecnologías utilizadas:</p>
+
+                                <div class="etiquetas_tecnologias">
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/html5-original.svg" alt="logo de html">
+                                        <div>HTML</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/css3-original.svg" alt="logo de html">
+                                        <div>CSS</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/javascript-original.svg" alt="logo de html">
+                                        <div>JavaScript</div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- Fin Tecnologías Card -->
+                        </div>
+
+                        <!-- Botones Card -->
+                        <div class="portafolio_botones">
+
+                            <div class="botones_ver">
+                                <button><a href="#a">Ver Proyecto</a></button>
+                                <button><a href="#a">Ver Código</a></button>
+                            </div>
+
+                            <button class="leerMas">Mostrar Descripción</button>
+                        </div>
+                        <!-- Fin Botones Card -->
+
+                        <!-- Parte trasera de la tarjeta -->
+                        <div class="portafolio_back">
+                            <!-- Parte superior trasera -->
+                            <div class="contenedor_portafolio_back">
+                                <p>Descripción</p>
+                                <div class="contenedor_texto_back">
+                                    <div class="contenido_back">
+                                        Este es un proyecto de demostración donde pongo de
+                                        manifiesto algunas de mis habilidades
+                                        maquetando y añadiendo algunas funcionalidades que se pueden encontrar en sitios
+                                        de
+                                        esta índole. Escogí una paleta de colores y tuve en cuenta una serie
+                                        de detalles para darle la mejor estética posible combinando el posicionamiento
+                                        de
+                                        los elementos y los colores a usar. <br><br>Este proyecto aunque parezca simple
+                                        presentó
+                                        una
+                                        serie de
+                                        retos a superar al crear el slider y la galería de imágenes, además tiene varias
+                                        detalles que solo se pueden ver en el código o
+                                        si inspeccionas muy a fondo la web y eres curioso.
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fin Parte superior trasera -->
+
+                            <!-- Botón Parte Trasera -->
+                            <div>
+                                <button class="boton_principal volver_atras">
+                                    Volver Atrás
+                                </button>
+                            </div>
+                            <!-- Fin Botón Parte Trasera -->
+                        </div>
+                        <!-- Fin Parte trasera de la tarjeta -->
+                    </div>
+                    <!-- Fin Card Portafolio -->
+
+                    <!-- Inicio Card Portafolio-->
+                    <div class="portafolio_card">
+
+                        <div class="contenedor_header_tecnologias">
+                            <!-- Header Card -->
+                            <div class="portafolio_header">
+                                <p>CRUD con PHP</p>
+                                <div class="imagen_card">
+                                    <img src="./img/crud_php.jpg">
+                                    <div class="tipo">Real</div>
+                                </div>
+                            </div>
+                            <!-- Fin Header Card -->
+
+                            <!-- Tecnologías Card -->
+                            <div class="portafolio_tecnologias">
+                                <p>Tecnologías utilizadas:</p>
+
+                                <div class="etiquetas_tecnologias">
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/html5-original.svg" alt="logo de html">
+                                        <div>HTML</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/css3-original.svg" alt="logo de html">
+                                        <div>CSS</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/bootstrap-original.svg">
+                                        <div>Bootstrap</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/javascript-original.svg">
+                                        <div>JavaScript</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/php-original.svg">
+                                        <div>PHP</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/mysql-original.svg">
+                                        <div>MySQL</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Fin Tecnologías Card -->
+                        </div>
+
+                        <!-- Botones Card -->
+                        <div class="portafolio_botones">
+
+                            <div class="botones_ver">
+                                <button><a href="#a">Ver Proyecto</a></button>
+                                <button><a href="#a">Ver Código</a></button>
+                            </div>
+
+                            <button class="leerMas">Mostrar Descripción</button>
+                        </div>
+                        <!-- Fin Botones Card -->
+
+                        <!-- Parte trasera de la tarjeta -->
+                        <div class="portafolio_back">
+
+                            <!-- Parte superior trasera -->
+                            <div class="contenedor_portafolio_back">
+                                <p>Descripción</p>
+                                <div class="contenedor_texto_back">
+                                    <div class="contenido_back">
+                                        Este es un trabajo de curso creado para una estudiante de España donde el
+                                        profesor
+                                        pedía un formulario con los campos que se ven en la página de incio, también
+                                        validar
+                                        los datos y almacenarlos en la base de datos, el campo del color se exigía en
+                                        RGB
+                                        por lo que fue necesario hacer una conversión del color en hexadecimal a RGB
+                                        para
+                                        guardarlo en la base de datos y el proceso inverso para mostrarlo. Además de los
+                                        requisitos del profesor se agregaron excepciones para manejar errores y
+                                        mostrarlas
+                                        como un modal, todos los modales son extras así como varias funciones del
+                                        código,
+                                        incluyendo la asincronía, ciertas validaciones, etcétera...
+                                        <br><br>
+                                        El formulario es dinámico y procesa solictudes sin recargar la página al igual
+                                        que
+                                        la sección para mostrar concursantes, fue un pequeño reto crear todo de forma
+                                        reactiva usando JavaScript puro, en especial la parte de la edición del
+                                        concursante
+                                        por cuestiones técnicas que se pueden entender mejor analizando el código.
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Parte superior trasera -->
+
+                            <!-- Botón Parte Trasera -->
+                            <div>
+                                <button class="boton_principal volver_atras">
+                                    Volver Atrás
+                                </button>
+                            </div>
+                            <!-- Fin Botón Parte Trasera -->
+                        </div>
+                        <!-- Fin Parte trasera de la tarjeta -->
+                    </div>
+                    <!-- Fin Card Portafolio -->
+
+                    <!-- Inicio Card Portafolio-->
+                    <div class="portafolio_card">
+
+                        <div class="contenedor_header_tecnologias">
+                            <!-- Header Card -->
+                            <div class="portafolio_header">
+                                <p>Housepot</p>
+                                <div class="imagen_card">
+                                    <img src="./img/propiedades_renta.jpg">
+                                    <div class="tipo left">Demo</div>
+                                </div>
+                            </div>
+                            <!-- Fin Header Card -->
+
+                            <!-- Tecnologías Card -->
+                            <div class="portafolio_tecnologias">
+                                <p>Tecnologías utilizadas:</p>
+
+                                <div class="etiquetas_tecnologias">
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/html5-original.svg" alt="logo de html">
+                                        <div>HTML</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/css3-original.svg" alt="logo de html">
+                                        <div>CSS</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/bootstrap-original.svg">
+                                        <div>Bootstrap</div>
+                                    </div>
+
+                                    <div class="lenguaje">
+                                        <img src="./img/icons/mdb.svg">
+                                        <div>MDB</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Fin Tecnologías Card -->
+                        </div>
+
+                        <!-- Botones Card -->
+                        <div class="portafolio_botones">
+
+                            <div class="botones_ver">
+                                <button><a href="#a">Ver Proyecto</a></button>
+                                <button><a href="#a">Ver Código</a></button>
+                            </div>
+
+                            <button class="leerMas">Mostrar Descripción</button>
+                        </div>
+                        <!-- Fin Botones Card -->
+
+                        <!-- Parte trasera de la tarjeta -->
+                        <div class="portafolio_back">
+
+                            <!-- Parte superior trasera -->
+                            <div class="contenedor_portafolio_back">
+                                <p>Descripción</p>
+                                <div class="contenedor_texto_back">
+                                    <div class="contenido_back">
+                                        Este es un proyecto de ejemplo para mostrar mi capcidad de trabajar utilizando
+                                        la
+                                        grid de Bootstrap y un Kit de Interfaz de Usuario llamado: Material Design for
+                                        Bootstrap 5. Esta web es solo una maquetación y no es funcional ni lo pretende
+                                        ser
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Parte superior trasera -->
+
+                            <!-- Botón Parte Trasera -->
+                            <div>
+                                <button class="boton_principal volver_atras">
+                                    Volver Atrás
+                                </button>
+                            </div>
+                            <!-- Fin Botón Parte Trasera -->
+                        </div>
+                        <!-- Fin Parte trasera de la tarjeta -->
+                    </div>
+                    <!-- Fin Card Portafolio -->
+
+                </div>
+
+            </section>
+            <!-- Fin Portafolio -->
+        </div>
+        <!-- Fin Contenedor Portafolio -->
+
     </main>
     <!-- Fin Main -->
 
 
     <script src="./js/menuHamburguesa.js"></script>
+    <script src="./js/tarjetasPortafolio.js"></script>
 </body>
 
 </html>

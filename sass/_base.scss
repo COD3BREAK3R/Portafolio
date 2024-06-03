@@ -3,7 +3,7 @@
 =============================================*/
 
 /* SCSS HEX */
-$purpura-logo  : #7847c4;
+$purpura-logo : #7847c4;
 
 $english-violet: #44355bff;
 $dark-purple   : #31263eff;
@@ -11,14 +11,25 @@ $raisin-black  : #221e22ff;
 $hunyadi-yellow: #eca72cff;
 $flame         : #ee5622ff;
 
-$blanco               : #eeeeeecc;
+$blanco : #eeeeeecc;
 
 /* SCSS Gradient */
-$gradiente-fondo: linear-gradient(0deg, rgba(34, 30, 34, 1) 0%, rgba(49, 38, 62, 1) 70%);
+$gradiente-fondo: linear-gradient(0deg, #221e22 0%, #31263e 70%);
+
+/*=============================================
+=                 MARK:Breakpoints                  
+=============================================*/
+
+$xs: 360px; // Extra small devices | Portrait phones (<34em : 22.5em)
+$sm: 545px; // Small devices | Landscape phones (≥34em)
+$md: 770px; // Medium devices | Tablets (≥48em)
+$lg: 990px; // Large devices | Desktops (≥62em)
+
 
 /*=============================================
 =                MARK:Estilos Base                   
 =============================================*/
+
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap');
 
 * {
@@ -45,6 +56,7 @@ body {
     overflow-x      : hidden;
     display         : flex;
     justify-content : center;
+    color           : $blanco;
 }
 
 main {
@@ -52,12 +64,25 @@ main {
 }
 
 /*=============================================
-=                 MARK:Breakpoints                  
+=         MARK:REsponsive Espacio                 
 =============================================*/
 
-$xs: 360px; // Extra small devices | Portrait phones (<34em : 22.5em)
-$sm: 545px; // Small devices | Landscape phones (≥34em)
-$md: 770px; // Medium devices | Tablets (≥48em)
-$lg: 990px; // Large devices | Desktops (≥62em)
+@media (width <=1238px) {
 
-/*============  End of Breakpoints  =============*/
+    header section,
+    .portafolio {
+        padding: 20px;
+    }
+}
+
+@media (width <= #{$xs}) {
+
+    nav {
+        padding: 20px;
+    }
+
+    header section, .portafolio{
+        padding: 10px;
+
+    }
+}

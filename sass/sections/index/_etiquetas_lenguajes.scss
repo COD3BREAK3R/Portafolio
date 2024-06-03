@@ -1,0 +1,13 @@
+.lenguaje {
+    font-size    : 1em;
+    border-radius: 20px;
+    padding      : 7px 25px 7px 25px;
+    display      : inline-flex;
+    align-items  : center;
+    gap: 0.2em;
+    background-color: $english-violet;
+
+    img {
+        width: 1.5em;
+    }
+}

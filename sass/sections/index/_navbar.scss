@@ -31,14 +31,27 @@ nav {
     .link {
         text-decoration: none;
         color          : lighten($purpura-logo, 15);
-        transition     : color 0.3s;
+        transition     : all 0.3s;
+        padding: 0;
 
         @media (hover: hover) {
             &:hover {
                 color     : lighten($purpura-logo, 25);
-                transition: color 0.3s;
+                transition: all 0.3s;
             }
         }
+
+        transition: all 0.5s;
+    }
+
+    .linkActivo {
+        background-color: rgba( $purpura-logo,0.8);
+        color           : $dark-purple;
+        transition      : all 0.5s;
+        padding         : 5px;
+        border-radius   : 20px;
+        padding-left    : 15px;
+        padding-right   : 15px;
     }
 
     .titulo {
@@ -54,7 +67,7 @@ nav {
         gap        : 1em;
 
         img {
-            width: 3.5em;
+            width       : 3.5em;
             aspect-ratio: 14/9;
         }
     }
@@ -98,6 +111,16 @@ nav {
     &.animar {
         transition: right 0.5s;
         right     : 0;
+    }
+
+    .linkActivo {
+        background-color: rgba( $purpura-logo,0.8);
+        color           : $dark-purple;
+        transition      : all 0.5s;
+        padding         : 5px;
+        border-radius   : 20px;
+        padding-left    : 15px;
+        padding-right   : 15px;
     }
 }
 

@@ -1,0 +1,130 @@
+.habilidades_contenedor {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    gap           : 20px;
+    background: url(../img/fondo2.png);
+    animation: moveBackground 1000s linear infinite;
+
+}
+
+.habilidades {
+    display        : flex;
+    max-width      : 1200px;
+    gap            : 20px;
+    justify-content: space-between;
+
+    
+
+    .lenguajes {
+        width          : 100%;
+        display        : flex;
+        justify-content: center;
+        height         : fit-content;
+        flex-wrap      : wrap;
+        gap            : 20px;
+    }
+
+    .otras_habilidades {
+        width          : 100%;
+        display        : flex;
+        justify-content: center;
+        flex-wrap      : wrap;
+        gap            : 20px;
+        height         : fit-content;
+    }
+
+    /* Subsection
+    -------------------------------------------------- */
+    .card_lenguaje {
+        width           : 150px;
+        display         : flex;
+        justify-content : space-between;
+        flex-direction  : column;
+        background-color: rgba($dark-purple,0.5);
+        padding         : 15px;
+        border-radius   : 10px;
+        gap             : 10px;
+        border          : 3px solid $english-violet;
+        position        : relative;
+        overflow        : hidden;
+
+        .nombre {
+            text-align : center;
+            font-weight: bold;
+        }
+
+        .boton_saber_mas {
+            @extend .boton_principal;
+            border-radius: 10px;
+            padding      : 10px;
+            font-size    : 1em;
+        }
+    }
+
+    /* Subsection
+    -------------------------------------------------- */
+    .card_otras_habilidades {
+        background-color: $dark-purple;
+        padding         : 20px;
+        width           : calc(50% - 15px);
+        max-width       : 300px;
+        border-radius   : 15px;
+        display         : flex;
+        flex-direction  : column;
+        align-items     : center;
+        gap             : 15px;
+        // height: fit-content;
+
+        .nombre {
+            font-weight: bold;
+            text-align : center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+/* Animación de reflejo */
+@keyframes reflejoLuz {
+    0% {
+        left: -250%;
+    }
+
+    50% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+/* Efecto de reflejo */
+.card_lenguaje::before {
+    content        : '';
+    position       : absolute;
+    top            : -100px;
+    left           : -150%;
+    width          : 100%;
+    height         : 300%;
+    transform      : rotate(25deg);
+    background     : linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0) 100%);
+    animation      : reflejoLuz 5s infinite;
+    animation-delay: 5s;
+}
+
+/*=============================================
+=                MARK:Responsive                   
+=============================================*/
+
+
+
+@media (width < #{$xs}) { 
+    .habilidades .card_lenguaje{
+        max-width: 120px;
+    }
+}
+/*============  End of Responsive  =============*/

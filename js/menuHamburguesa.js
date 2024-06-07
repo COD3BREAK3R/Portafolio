@@ -5,14 +5,17 @@ const enlaces_nav_movil = document.querySelector(".enlaces_nav_movil");
 /*=============================================
 =            MARK:Menú Hamburguesa                  
 =============================================*/
-
-hamburguesa.addEventListener("click", () => {
+abrirCerraMenuHamburguesa = ()=>{
     hamburguesa.classList.toggle("activo");
     oscurecer_fondo.classList.toggle("mostrar");
     enlaces_nav_movil.classList.toggle("animar");
 
     setTimeout(() => {}, 100);
     document.body.classList.toggle("noScroll");
+}
+
+hamburguesa.addEventListener("click", () => {
+    abrirCerraMenuHamburguesa();
 });
 
 /*=============================================
@@ -28,8 +31,13 @@ const calcularAlturaOscurecerFondo = () => {
     enlaces_nav_movil.style.top = `${alturaNav + 15}px`;
 };
 
-
 window.addEventListener("load", calcularAlturaOscurecerFondo);
 window.addEventListener("resize", calcularAlturaOscurecerFondo);
+
+window.addEventListener('resize', ()=>{
+    if (window.innerWidth > 770 && oscurecer_fondo.classList.contains('mostrar')) {
+        abrirCerraMenuHamburguesa()
+    }
+})
 
 /*============  End of Posicionamiento Menú Movil  =============*/

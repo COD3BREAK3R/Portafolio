@@ -49,6 +49,7 @@ html {
     ::-webkit-scrollbar {
         display: none;
     }
+    scroll-behavior: smooth;
 }
 
 body {
@@ -63,6 +64,22 @@ main {
     width: 100%;
 }
 
+.seccion_intro{
+    h2 {
+        font-size: 2.5em;
+        color    : lighten($purpura-logo, 5);
+    }
+
+    .parrafo_intro {
+        font-size: 1.2em;
+    }
+
+    h2,
+    div {
+        text-align: center;
+    }
+}
+
 /*=============================================
 =         MARK:REsponsive Espacio                 
 =============================================*/
@@ -70,7 +87,7 @@ main {
 @media (width <=1238px) {
 
     header section,
-    .portafolio {
+    .portafolio, .habilidades_contenedor {
         padding: 20px;
     }
 }
@@ -81,7 +98,7 @@ main {
         padding: 20px;
     }
 
-    header section, .portafolio{
+    header section, .portafolio, .habilidades_contenedor{
         padding: 10px;
 
     }

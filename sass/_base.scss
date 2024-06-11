@@ -49,6 +49,7 @@ html {
     ::-webkit-scrollbar {
         display: none;
     }
+
     scroll-behavior: smooth;
 }
 
@@ -64,10 +65,14 @@ main {
     width: 100%;
 }
 
-.seccion_intro{
+.seccion_intro {
     h2 {
         font-size: 2.5em;
         color    : lighten($purpura-logo, 5);
+
+        @media (width < #{$md}) {
+            font-size: 1.8em;
+        }
     }
 
     .parrafo_intro {
@@ -87,18 +92,25 @@ main {
 @media (width <=1238px) {
 
     header section,
-    .portafolio, .habilidades_contenedor {
+    .portafolio,
+    .habilidades_contenedor,
+    .sobre_mi_contenedor,
+    .contacto_contenedor {
         padding: 20px;
     }
 }
 
-@media (width <= #{$xs}) {
+@media (width <=#{$xs}) {
 
     nav {
         padding: 20px;
     }
 
-    header section, .portafolio, .habilidades_contenedor{
+    header section,
+    .portafolio,
+    .habilidades_contenedor,
+    .sobre_mi_contenedor,
+    .contacto_contenedor {
         padding: 10px;
 
     }

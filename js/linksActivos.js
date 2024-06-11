@@ -8,8 +8,8 @@ function elementoOcupaMitadViewport(elemento) {
     const alturaViewport =
         window.innerHeight || document.documentElement.clientHeight;
 
-    const parteSuperiorElemento = rect.top;
-    const parteInferiorElemento = rect.bottom;
+    const parteSuperiorElemento = Math.floor(rect.top);
+    const parteInferiorElemento = Math.floor(rect.bottom);
 
     const alturaTargetViewport = (alturaViewport / 2) * 0.35;
 
@@ -35,17 +35,14 @@ agregarClaseEnlaces = () => {
 
         if (elementoOcupaMitadViewport(elemento)) {
             tipoEnlace[i].classList.add("linkActivo");
-            console.log(tipoEnlace[i]);
 
-            tipoEnlace.forEach((element, indice2) => {
+            tipoEnlace.forEach((_, indice2) => {
                 if (
                     tipoEnlace[indice2].classList.contains("linkActivo") &&
                     indice2 !== i
                 ) {
-                    console.log(tipoEnlace[indice2]);
                     tipoEnlace[indice2].classList.remove("linkActivo");
                 }
-
             });
         } else {
             tipoEnlace[i].classList.remove("linkActivo");

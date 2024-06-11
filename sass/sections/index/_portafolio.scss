@@ -153,7 +153,7 @@
     height    : 100%;
     transform : rotateY(180deg);
     transition: transform 0.5s;
-    z-index   : -10;
+    z-index   : -1000;
 
     transition: opacity 0.2s;
     opacity   : 0;

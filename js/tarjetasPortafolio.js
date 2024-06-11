@@ -25,6 +25,7 @@ invertirCard = (indice) => {
     portafolio_header[indice].style.visibility = "hidden";
     portafolio_tecnologias[indice].style.visibility = "hidden";
     portafolio_botones[indice].style.visibility = "hidden";
+    portafolio_back[indice].style.zIndex = "-10";
 
     setTimeout(() => {
         portafolio_back[indice].style.opacity = "1";
@@ -35,6 +36,7 @@ invertirCard = (indice) => {
 
 volverAtras = (indice) => {
     portafolio_card[indice].style.transform = "rotateY(0deg)";
+    portafolio_back[indice].style.zIndex = "-1000";
 
     setTimeout(() => {
         portafolio_header[indice].style.visibility = "visible";

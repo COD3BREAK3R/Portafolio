@@ -1,0 +1,82 @@
+.sobre_mi_contenedor {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+}
+
+.sobre_mi {
+
+    max-width : 1200px;
+    margin-top: 20px;
+
+    .texto {
+        background-color: rgba($dark-purple, 1);
+        padding         : 20px;
+        border-radius   : 10px;
+        border-left     : 5px solid $purpura-logo;
+        font-size       : 1.1em;
+        line-height     : 1.4;
+        position        : relative;
+        box-shadow      : 3px 3px 10px #00000050;
+        &::before {
+            content      : "";
+            border-left  : 20px solid transparent;
+            border-right : 20px solid transparent;
+            border-bottom: 20px solid $dark-purple;
+            position     : absolute;
+            top          : -20px;
+            left         : 50%;
+            transform    : translateX(-50%);
+        }
+
+        p{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .comilla_arriba, .comilla_abajo{
+        width: 3em;
+        position: absolute;
+        filter: drop-shadow( 4px 4px 3px #0000002a);
+    }
+
+    .comilla_arriba{
+        top: -20px;
+    }
+    .comilla_abajo{
+        transform: rotate(180deg);
+        right:20px;
+        bottom: -20px;
+    }
+}
+
+/*=============================================
+=                   MARK:Resposive                   
+=============================================*/
+
+@media (width <=#{$md}) {
+    .sobre_mi{
+        .texto{
+
+            p{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+    
+            .comilla_arriba,.comilla_abajo{
+                width: 2em;
+            }
+
+            .comilla_arriba{
+                top: -15px;
+            }
+
+            .comilla_abajo{
+                bottom: -15px;
+            }
+        }
+    }
+ }
+
+/*============  End of Resposive  =============*/

@@ -8,13 +8,15 @@
     }
 }
 
-.portafolio_contenedor {
-    display        : flex;
-    justify-content: center;
-
+.fondo{
     background-image : url('../img/fondo2.png');
     background-repeat: repeat space;
     animation        : moveBackground 1000s linear infinite;
+}
+
+.portafolio_contenedor {
+    display        : flex;
+    justify-content: center;
 }
 
 .portafolio {

@@ -455,6 +455,13 @@ header .contenedor_texto_header .contenedor_botones_header {
     background-position: -18000px 0;
   }
 }
+.fondo {
+  background-image: url("../img/fondo2.png");
+  background-repeat: repeat space;
+  -webkit-animation: moveBackground 1000s linear infinite;
+          animation: moveBackground 1000s linear infinite;
+}
+
 .portafolio_contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -462,10 +469,6 @@ header .contenedor_texto_header .contenedor_botones_header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../img/fondo2.png");
-  background-repeat: repeat space;
-  -webkit-animation: moveBackground 1000s linear infinite;
-          animation: moveBackground 1000s linear infinite;
 }
 
 .portafolio {
@@ -746,11 +749,6 @@ header .contenedor_texto_header .contenedor_botones_header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  background: url(../img/fondo2.png);
-  -webkit-animation: moveBackground 1000s linear infinite;
-          animation: moveBackground 1000s linear infinite;
-  background-repeat: repeat space;
-  min-height: 500px;
 }
 
 .habilidades {

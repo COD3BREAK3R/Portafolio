@@ -185,13 +185,13 @@ nav {
 =                  MARK:Responsive                  
 =============================================*/
 
-@media (width < #{$md}) {
+@media (width < 865px) {
     .enlaces_nav {
         display: none;
     }
 }
 
-@media (width >=#{$md}) {
+@media (width >=865px) {
 
     .hamburguesa,
     .enlaces_nav_movil {

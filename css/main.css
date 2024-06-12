@@ -69,8 +69,7 @@ main {
   header section,
   .portafolio,
   .habilidades_contenedor,
-  .sobre_mi_contenedor,
-  .contacto_contenedor {
+  .sobre_mi_contenedor {
     padding: 20px;
   }
 }
@@ -81,8 +80,7 @@ main {
   header section,
   .portafolio,
   .habilidades_contenedor,
-  .sobre_mi_contenedor,
-  .contacto_contenedor {
+  .sobre_mi_contenedor {
     padding: 10px;
   }
 }
@@ -281,12 +279,12 @@ nav {
 /*=============================================
 =                  MARK:Responsive                  
 =============================================*/
-@media (width < 770px) {
+@media (width < 865px) {
   .enlaces_nav {
     display: none;
   }
 }
-@media (width >= 770px) {
+@media (width >= 865px) {
   .hamburguesa,
   .enlaces_nav_movil {
     display: none;
@@ -751,6 +749,8 @@ header .contenedor_texto_header .contenedor_botones_header {
   background: url(../img/fondo2.png);
   -webkit-animation: moveBackground 1000s linear infinite;
           animation: moveBackground 1000s linear infinite;
+  background-repeat: repeat space;
+  min-height: 500px;
 }
 
 .habilidades {
@@ -918,6 +918,7 @@ header .contenedor_texto_header .contenedor_botones_header {
 .sobre_mi {
   max-width: 1200px;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 .sobre_mi .texto {
   background-color: #31263e;
@@ -945,7 +946,8 @@ header .contenedor_texto_header .contenedor_botones_header {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.sobre_mi .comilla_arriba, .sobre_mi .comilla_abajo {
+.sobre_mi .comilla_arriba,
+.sobre_mi .comilla_abajo {
   width: 3em;
   position: absolute;
   -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.1647058824));
@@ -969,7 +971,8 @@ header .contenedor_texto_header .contenedor_botones_header {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .sobre_mi .texto .comilla_arriba, .sobre_mi .texto .comilla_abajo {
+  .sobre_mi .texto .comilla_arriba,
+  .sobre_mi .texto .comilla_abajo {
     width: 2em;
   }
   .sobre_mi .texto .comilla_arriba {
@@ -980,3 +983,109 @@ header .contenedor_texto_header .contenedor_botones_header {
   }
 }
 /*============  End of Resposive  =============*/
+.contacto_contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+}
+.contacto_contenedor .seccion_intro {
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4431372549);
+}
+
+.contenedor2 {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  max-width: 1200px;
+  background-color: #31263e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  border-top: 3px solid #7847c4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2344355B' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237847C4'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.contacto {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+.contacto .metodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacto .metodo .logo_aplicacion {
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacto .metodo .logo_aplicacion img {
+  width: 2.8em;
+  -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.1647058824));
+          filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.1647058824));
+}
+.contacto .metodo .nombre_aplicacion a {
+  font-size: 1.8em;
+  color: rgba(238, 238, 238, 0.8);
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  font-weight: bold;
+}
+.contacto .metodo .nombre_aplicacion a.telegram:hover {
+  color: #229ED9;
+}
+.contacto .metodo .nombre_aplicacion a.whatsapp:hover {
+  color: #4bc759;
+}
+
+/*=============================================
+=                  MARK:Responsive                   
+=============================================*/
+@media (width < 770px) {
+  .contacto .nombre_aplicacion {
+    font-size: 0.8em;
+  }
+  .contacto .metodo .logo_aplicacion img {
+    width: 2em;
+  }
+}
+@media (width <= 545px) {
+  .contacto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*============  End of Responsive  =============*/

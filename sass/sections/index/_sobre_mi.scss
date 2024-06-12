@@ -6,8 +6,9 @@
 
 .sobre_mi {
 
-    max-width : 1200px;
-    margin-top: 20px;
+    max-width    : 1200px;
+    margin-top   : 20px;
+    margin-bottom: 30px;
 
     .texto {
         background-color: rgba($dark-purple, 1);
@@ -18,6 +19,7 @@
         line-height     : 1.4;
         position        : relative;
         box-shadow      : 3px 3px 10px #00000050;
+
         &::before {
             content      : "";
             border-left  : 20px solid transparent;
@@ -29,25 +31,27 @@
             transform    : translateX(-50%);
         }
 
-        p{
-            margin-top: 20px;
+        p {
+            margin-top   : 20px;
             margin-bottom: 20px;
         }
     }
 
-    .comilla_arriba, .comilla_abajo{
-        width: 3em;
+    .comilla_arriba,
+    .comilla_abajo {
+        width   : 3em;
         position: absolute;
-        filter: drop-shadow( 4px 4px 3px #0000002a);
+        filter  : drop-shadow(4px 4px 3px #0000002a);
     }
 
-    .comilla_arriba{
+    .comilla_arriba {
         top: -20px;
     }
-    .comilla_abajo{
+
+    .comilla_abajo {
         transform: rotate(180deg);
-        right:20px;
-        bottom: -20px;
+        right    : 20px;
+        bottom   : -20px;
     }
 }
 
@@ -56,27 +60,28 @@
 =============================================*/
 
 @media (width <=#{$md}) {
-    .sobre_mi{
-        .texto{
+    .sobre_mi {
+        .texto {
 
-            p{
-                margin-top: 10px;
+            p {
+                margin-top   : 10px;
                 margin-bottom: 10px;
             }
-    
-            .comilla_arriba,.comilla_abajo{
+
+            .comilla_arriba,
+            .comilla_abajo {
                 width: 2em;
             }
 
-            .comilla_arriba{
+            .comilla_arriba {
                 top: -15px;
             }
 
-            .comilla_abajo{
+            .comilla_abajo {
                 bottom: -15px;
             }
         }
     }
- }
+}
 
 /*============  End of Resposive  =============*/

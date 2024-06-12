@@ -120,7 +120,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 }
 .contenedor_nav .link {
   text-decoration: none;
@@ -412,6 +412,11 @@ header .contenedor_texto_header .contenedor_botones_header {
 /*=============================================
 =                 MARK:Responsive                 
 =============================================*/
+@media (width > 770px) {
+  header section {
+    margin-top: 30px;
+  }
+}
 @media (width <= 770px) {
   header section {
     -webkit-box-orient: vertical;

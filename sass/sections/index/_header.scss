@@ -85,8 +85,9 @@ header {
             width  : 100%;
             display: flex;
             gap    : 15px;
-
-            button {
+            
+            a {
+                text-decoration: none;
 
                 &.contactame {
                     @extend .boton_principal;
@@ -115,6 +116,7 @@ header {
     header section {
         flex-direction: column;
         flex-direction: column-reverse;
+        margin-bottom: 30px;
     }
 
     header .contenedor_texto_header {

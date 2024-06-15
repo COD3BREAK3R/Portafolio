@@ -32,7 +32,7 @@ nav {
         text-decoration: none;
         color          : lighten($purpura-logo, 15);
         transition     : all 0.3s;
-        padding: 0;
+        padding        : 0;
 
         @media (hover: hover) {
             &:hover {
@@ -44,8 +44,20 @@ nav {
         transition: all 0.5s;
     }
 
+    .linkTitulo{
+        text-decoration: none;
+        transition: color 0.3s;
+
+        @media (hover: hover) {
+            &:hover {
+                color     : lighten($purpura-logo, 25);
+                transition: color 0.3s;
+            }
+        }
+    }
+
     .linkActivo {
-        background-color: rgba( $purpura-logo,0.8);
+        background-color: rgba($purpura-logo, 0.8);
         color           : $dark-purple;
         transition      : all 0.5s;
         padding         : 5px;
@@ -114,7 +126,7 @@ nav {
     }
 
     .linkActivo {
-        background-color: rgba( $purpura-logo,0.8);
+        background-color: rgba($purpura-logo, 0.8);
         color           : $dark-purple;
         transition      : all 0.5s;
         padding         : 5px;
@@ -202,7 +214,7 @@ nav {
 @media (width < #{$sm}) {
 
     .titulo_nav {
-        font-size: 0.6em;
+        font-size : 0.6em;
     }
 
     .enlaces_nav_movil ul {

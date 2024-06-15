@@ -134,7 +134,8 @@
             gap          : 20px;
             margin-bottom: 15px;
 
-            button {
+            button, a {
+                text-decoration: none;
                 width: 50%;
                 @extend .boton_secundario;
             }

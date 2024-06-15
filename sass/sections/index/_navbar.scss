@@ -44,9 +44,9 @@ nav {
         transition: all 0.5s;
     }
 
-    .linkTitulo{
+    .linkTitulo {
         text-decoration: none;
-        transition: color 0.3s;
+        transition     : color 0.3s;
 
         @media (hover: hover) {
             &:hover {
@@ -100,6 +100,7 @@ nav {
     border-radius   : 10px 0px 0px 10px;
     z-index         : 20;
     transition      : right 0.5s;
+    margin-top      : calc(79px + 15px);
 
     ul {
         display       : flex;
@@ -214,11 +215,15 @@ nav {
 @media (width < #{$sm}) {
 
     .titulo_nav {
-        font-size : 0.6em;
+        font-size: 0.6em;
     }
 
-    .enlaces_nav_movil ul {
-        font-size: 1em;
+    .enlaces_nav_movil {
+        margin-top: calc(63px + 15px);
+
+        ul {
+            font-size: 1em;
+        }
     }
 }
 

@@ -43,6 +43,12 @@ body {
 
 main {
   width: 100%;
+  margin-top: 78px;
+}
+@media (width < 545px) {
+  main {
+    margin-top: 62px;
+  }
 }
 
 .seccion_intro h2 {
@@ -198,6 +204,7 @@ nav {
   z-index: 20;
   -webkit-transition: right 0.5s;
   transition: right 0.5s;
+  margin-top: 94px;
 }
 .enlaces_nav_movil ul {
   display: -webkit-box;
@@ -305,6 +312,9 @@ nav {
 @media (width < 545px) {
   .titulo_nav {
     font-size: 0.6em;
+  }
+  .enlaces_nav_movil {
+    margin-top: 78px;
   }
   .enlaces_nav_movil ul {
     font-size: 1em;
@@ -477,7 +487,7 @@ header .contenedor_texto_header .contenedor_botones_header a {
   }
 }
 .fondo {
-  background-image: url("../img/fondo2.png");
+  background-image: url("../img/webp/fondo2.webp");
   background-repeat: repeat space;
   -webkit-animation: moveBackground 1000s linear infinite;
           animation: moveBackground 1000s linear infinite;

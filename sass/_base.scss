@@ -63,6 +63,11 @@ body {
 
 main {
     width: 100%;
+    margin-top: 78px;
+
+    @media (width < #{$sm}) {
+        margin-top: 62px;
+    }
 }
 
 .seccion_intro {

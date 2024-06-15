@@ -19,22 +19,8 @@ hamburguesa.addEventListener("click", () => {
 });
 
 /*=============================================
-=       MARK:Posicionamiento Menú Movil                  
+=       MARK:Cerrar Menú Movil                  
 =============================================*/
-
-const nav = document.querySelector("nav");
-const main = document.querySelector("main");
-
-const calcularAlturaOscurecerFondo = () => {
-    const alturaNav = nav.offsetHeight;
-    main.style.marginTop = `${alturaNav-1}px`;
-    enlaces_nav_movil.style.top = `${alturaNav + 15}px`;
-
-    console.log();
-};
-
-window.addEventListener("load", calcularAlturaOscurecerFondo);
-window.addEventListener("resize", calcularAlturaOscurecerFondo);
 
 window.addEventListener("resize", () => {
     if (
@@ -45,4 +31,4 @@ window.addEventListener("resize", () => {
     }
 });
 
-/*============  End of Posicionamiento Menú Movil  =============*/
+/*============  End of Cerrar Menú Movil  =============*/

@@ -198,6 +198,12 @@ nav {
 =                  MARK:Responsive                  
 =============================================*/
 
+@media (width >= #{$sm}) {
+    nav {
+        height: 79px;
+    }
+}
+
 @media (width < 865px) {
     .enlaces_nav {
         display: none;
@@ -213,6 +219,10 @@ nav {
 }
 
 @media (width < #{$sm}) {
+
+    nav {
+        height: 63px;
+    }
 
     .titulo_nav {
         font-size: 0.6em;

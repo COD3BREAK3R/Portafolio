@@ -55,8 +55,10 @@ header {
         align-items    : center;
 
         img {
+            width: 568px;
             max-width   : 50%;
             aspect-ratio: 568/595;
+            object-fit: contain;
         }
     }
 
@@ -67,6 +69,7 @@ header {
         justify-content: center;
         align-items    : center;
         margin-right   : 20px;
+        max-width      : 50%;
 
         h2 {
             text-align: center;
@@ -85,7 +88,7 @@ header {
             width  : 100%;
             display: flex;
             gap    : 15px;
-            
+
             a {
                 text-decoration: none;
 
@@ -109,6 +112,7 @@ header {
 @media (width >#{$md}) {
     header section {
         margin-top: 30px;
+        margin-bottom: 20px;
     }
 }
 
@@ -116,11 +120,13 @@ header {
     header section {
         flex-direction: column;
         flex-direction: column-reverse;
-        margin-bottom: 30px;
+        margin-bottom : 30px;
     }
 
     header .contenedor_texto_header {
+        margin-top  : 20px;
         margin-right: 0px;
+        max-width   : 100%;
     }
 
     header section img {

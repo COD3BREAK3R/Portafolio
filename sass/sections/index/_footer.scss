@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    justify-content: center;
+    color: lighten($purpura-logo, 20);
+    text-align: center;
+}
+
+.footer{
+    max-width: 1200px;
+    background-color: $dark-purple;
+    padding: 0px 15px 15px 15px;
+
+    a {
+        color: lighten($purpura-logo, 20);
+    }
+}

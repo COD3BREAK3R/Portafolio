@@ -44,6 +44,10 @@
         position        : relative;
         overflow        : hidden;
 
+        img {
+            aspect-ratio: 1/1;
+        }
+
         .nombre {
             text-align : center;
             font-weight: bold;
@@ -54,30 +58,6 @@
             border-radius: 10px;
             padding      : 10px;
             font-size    : 1em;
-        }
-    }
-
-    /* Subsection
-    -------------------------------------------------- */
-    .card_otras_habilidades {
-        background-color: $dark-purple;
-        padding         : 20px;
-        width           : calc(50% - 15px);
-        max-width       : 300px;
-        border-radius   : 15px;
-        display         : flex;
-        flex-direction  : column;
-        align-items     : center;
-        gap             : 15px;
-        // height: fit-content;
-
-        .nombre {
-            font-weight: bold;
-            text-align : center;
-        }
-
-        img {
-            max-width: 100%;
         }
     }
 }

@@ -30,7 +30,7 @@ $lg: 990px; // Large devices | Desktops (≥62em)
 =                MARK:Estilos Base                   
 =============================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=REM:wght@100..900&display=swap');
 
 * {
     margin    : 0;
@@ -40,6 +40,7 @@ $lg: 990px; // Large devices | Desktops (≥62em)
     font-family        : 'REM', sans-serif;
     font-optical-sizing: auto;
     font-style         : normal;
+    font-display       : swap;
 
     -webkit-tap-highlight-color: transparent;
 }
@@ -62,7 +63,7 @@ body {
 }
 
 main {
-    width: 100%;
+    width     : 100%;
     margin-top: 78px;
 
     @media (width < #{$sm}) {
@@ -99,7 +100,7 @@ main {
     header section,
     .portafolio,
     .habilidades_contenedor,
-    .sobre_mi_contenedor{
+    .sobre_mi_contenedor {
         padding: 20px;
     }
 }
@@ -113,7 +114,7 @@ main {
     header section,
     .portafolio,
     .habilidades_contenedor,
-    .sobre_mi_contenedor{
+    .sobre_mi_contenedor {
         padding: 10px;
     }
 }

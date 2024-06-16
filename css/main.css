@@ -23,6 +23,7 @@
 }
 
 html {
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 html ::-webkit-scrollbar {
@@ -703,7 +704,7 @@ header .contenedor_texto_header .contenedor_botones_header a {
   visibility: hidden;
 }
 .portafolio_back .contenedor_texto_back {
-  max-height: calc(100% - 2.7em);
+  max-height: calc(100% - 2.5em);
   overflow: scroll;
 }
 .portafolio_back button {

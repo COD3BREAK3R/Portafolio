@@ -1,6 +1,6 @@
 const menu = document.querySelector("nav");
 const enlacesPC = menu.querySelectorAll(".linkPC");
-const enlacesMovil = enlaces_nav_movil.querySelectorAll(".linkMovil");
+const enlacesMovil = document.querySelectorAll(".enlaces_nav_movil .linkMovil");
 const sections = document.querySelectorAll(".seccion");
 
 function elementoOcupaMitadViewport(elemento) {

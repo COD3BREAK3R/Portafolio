@@ -330,7 +330,7 @@ nav {
   }
 }
 /*============  End of Resposive  =============*/
-.boton, .boton_secundario, .portafolio_card .portafolio_botones .botones_ver button, .portafolio_card .portafolio_botones .botones_ver a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv, .boton_principal, .habilidades .card_lenguaje .boton_saber_mas, .portafolio_card .portafolio_botones button, header .contenedor_texto_header .contenedor_botones_header a.contactame {
+.boton, .boton_secundario, .portafolio_card .portafolio_botones .botones_ver a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv, .boton_principal, .habilidades .card_lenguaje .boton_saber_mas, .portafolio_card .portafolio_botones button, header .contenedor_texto_header .contenedor_botones_header a.contactame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,7 +350,7 @@ nav {
   -webkit-box-shadow: 0px 0px 0px 0px #7847c4;
           box-shadow: 0px 0px 0px 0px #7847c4;
 }
-.boton a, .boton_secundario a, .portafolio_card .portafolio_botones .botones_ver button a, .portafolio_card .portafolio_botones .botones_ver a a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv a, .boton_principal a, .habilidades .card_lenguaje .boton_saber_mas a, .portafolio_card .portafolio_botones button a, header .contenedor_texto_header .contenedor_botones_header a.contactame a {
+.boton a, .boton_secundario a, .portafolio_card .portafolio_botones .botones_ver a a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv a, .boton_principal a, .habilidades .card_lenguaje .boton_saber_mas a, .portafolio_card .portafolio_botones button a, header .contenedor_texto_header .contenedor_botones_header a.contactame a {
   text-decoration: none;
   color: rgba(238, 238, 238, 0.8);
 }
@@ -364,7 +364,7 @@ nav {
   background-color: #6b3bb7;
 }
 
-.boton_secundario, .portafolio_card .portafolio_botones .botones_ver button, .portafolio_card .portafolio_botones .botones_ver a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv {
+.boton_secundario, .portafolio_card .portafolio_botones .botones_ver a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv {
   background-color: transparent;
   border: solid #6034a4;
   -webkit-transition: border, -webkit-box-shadow 0.5s;
@@ -372,7 +372,7 @@ nav {
   transition: border, box-shadow 0.5s;
   transition: border, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
-.boton_secundario:hover, .portafolio_card .portafolio_botones .botones_ver button:hover, .portafolio_card .portafolio_botones .botones_ver a:hover, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv:hover {
+.boton_secundario:hover, .portafolio_card .portafolio_botones .botones_ver a:hover, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv:hover {
   border: solid #6b3bb7;
   -webkit-box-shadow: 0px 0px 10px 0px #7847c4;
           box-shadow: 0px 0px 10px 0px #7847c4;
@@ -647,9 +647,12 @@ header .contenedor_texto_header .contenedor_botones_header a {
   gap: 20px;
   margin-bottom: 15px;
 }
-.portafolio_card .portafolio_botones .botones_ver button, .portafolio_card .portafolio_botones .botones_ver a {
+.portafolio_card .portafolio_botones .botones_ver a {
   text-decoration: none;
   width: 50%;
+}
+.portafolio_card .portafolio_botones .botones_ver a.solitario {
+  width: 100%;
 }
 .portafolio_back {
   position: absolute;

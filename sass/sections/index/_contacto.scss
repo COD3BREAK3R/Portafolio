@@ -6,7 +6,7 @@
 
     .seccion_intro {
         margin-bottom: 20px;
-        text-shadow: 0px 0px 5px #00000071;
+        text-shadow  : 0px 0px 5px #00000071;
     }
 }
 
@@ -18,7 +18,7 @@
     display         : flex;
     flex-direction  : column;
     justify-content : center;
-    padding  : 40px;
+    padding         : 40px;
     border-top      : 3px solid $purpura-logo;
 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2344355B' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%237847C4'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
@@ -29,6 +29,13 @@
     display        : flex;
     justify-content: center;
     gap            : 50px;
+    flex-wrap      : wrap;
+
+    &__seccion {
+        display: flex;
+        gap    : 50px;
+    }
+
 
     .metodo {
         display    : flex;
@@ -39,9 +46,9 @@
             display      : flex;
 
             img {
-                width: 2.8em;
+                width       : 2.8em;
                 aspect-ratio: 1/1;
-                filter  : drop-shadow(4px 4px 3px #0000002a);
+                filter      : drop-shadow(4px 4px 3px #0000002a);
             }
         }
 
@@ -59,6 +66,18 @@
             &.whatsapp:hover {
                 color: #4bc759;
             }
+
+            &.linkedin:hover {
+                color: #0070a8;
+            }
+
+            &.email:hover {
+                color: #FCD063;
+            }
+        }
+
+        &.email {
+            padding-left: 2px;
         }
     }
 }
@@ -67,9 +86,60 @@
 =                  MARK:Responsive                   
 =============================================*/
 
-
 @media (width <#{$md}) {
     .contacto {
+
+        .nombre_aplicacion {
+            font-size: 0.8em;
+        }
+
+        .metodo .logo_aplicacion img {
+            width: 2.5em;
+        }
+    }
+}
+
+
+@media (width <=#{$lg}) {
+    .contacto {
+        flex-direction: column;
+
+        &__seccion {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            gap            : 50px;
+        }
+
+        .metodo {
+            width    : 100%;
+            max-width: 211px;
+        }
+    }
+}
+
+@media (width <=#{$md}) {
+    .contacto {
+        .metodo {
+            max-width: 176px;
+        }
+    }
+
+}
+
+@media (width <=#{$sm}) {
+    .contacto {
+        gap: 30px;
+
+        &__seccion {
+            align-items   : center;
+            gap           : 30px;
+        }
+
+        .metodo {
+            max-width: 168px;
+
+        }
 
         .nombre_aplicacion {
             font-size: 0.8em;
@@ -81,13 +151,74 @@
     }
 }
 
-@media (width <=#{$sm}) {
+@media (width <=#{455px}) {
     .contacto {
-        flex-direction: column;
-        gap           : 25px;
-        align-items: center;
+
+        .metodo {
+            max-width: 150px;
+        }
+
+        .nombre_aplicacion {
+            font-size: 0.7em;
+        }
+
+        .metodo .logo_aplicacion img {
+            width: 1.8em;
+        }
     }
 
+}
+
+@media (width <=#{410px}) {
+    .contacto {
+
+        .metodo {
+            max-width: 106px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .logo_aplicacion{
+                padding-right: 0;
+            }
+        }
+
+        .nombre_aplicacion {
+            font-size: 0.8em;
+        }
+
+        .metodo .logo_aplicacion img {
+            width: 2em;
+        }
+    }
+}
+
+@media (width <=#{320px}) {
+    .contacto {
+
+        &__seccion{
+            flex-direction: column;
+        }
+
+        .metodo {
+            max-width: max-content;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            .logo_aplicacion{
+                padding-right: 0;
+            }
+        }
+
+        .nombre_aplicacion {
+            font-size: 0.8em;
+        }
+
+        .metodo .logo_aplicacion img {
+            width: 2em;
+        }
+    }
 }
 
 /*============  End of Responsive  =============*/

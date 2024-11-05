@@ -604,7 +604,7 @@ header .contenedor_texto_header .contenedor_botones_header a {
   font-size: 0.85em;
 }
 @media (width > 650px) {
-  .portafolio_card .portafolio_header .tipo.left {
+  .portafolio_card .portafolio_header .tipo.right {
     right: 0;
   }
 }
@@ -809,7 +809,7 @@ header .contenedor_texto_header .contenedor_botones_header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1200px;
+  max-width: 900px;
   gap: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;

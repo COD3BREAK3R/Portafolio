@@ -39,10 +39,11 @@
 
     .comilla_arriba,
     .comilla_abajo {
-        width   : 3em;
-        position: absolute;
-        filter  : drop-shadow(4px 4px 3px #0000002a);
+        width       : 3em;
+        position    : absolute;
+        filter      : drop-shadow(4px 4px 3px #0000002a);
         aspect-ratio: 59/50;
+        user-select : none;
     }
 
     .comilla_arriba {

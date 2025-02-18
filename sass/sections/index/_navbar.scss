@@ -29,6 +29,7 @@ nav {
     }
 
     .link {
+        user-select    : none;
         text-decoration: none;
         color          : lighten($purpura-logo, 15);
         transition     : all 0.3s;
@@ -74,6 +75,7 @@ nav {
     }
 
     .titulo_nav {
+        user-select    : none;
         display    : flex;
         align-items: center;
         gap        : 1em;
@@ -198,7 +200,7 @@ nav {
 =                  MARK:Responsive                  
 =============================================*/
 
-@media (width >= #{$sm}) {
+@media (width >=#{$sm}) {
     nav {
         height: 79px;
     }

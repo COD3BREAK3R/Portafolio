@@ -53,6 +53,10 @@ main {
 }
 
 .seccion_intro h2 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 2.5em;
   color: #865aca;
 }
@@ -130,6 +134,10 @@ nav {
   gap: 1.5em;
 }
 .contenedor_nav .link {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-decoration: none;
   color: #a381d7;
   -webkit-transition: all 0.3s;
@@ -173,6 +181,10 @@ nav {
   color: #946ed0;
 }
 .contenedor_nav .titulo_nav {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,6 +361,10 @@ nav {
   color: rgba(238, 238, 238, 0.8);
   -webkit-box-shadow: 0px 0px 0px 0px #7847c4;
           box-shadow: 0px 0px 0px 0px #7847c4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .boton a, .boton_secundario a, .portafolio_card .portafolio_botones .botones_ver a a, header .contenedor_texto_header .contenedor_botones_header a.descargar_cv a, .boton_principal a, .habilidades .card_lenguaje .boton_saber_mas a, .portafolio_card .portafolio_botones button a, header .contenedor_texto_header .contenedor_botones_header a.contactame a {
   text-decoration: none;
@@ -409,6 +425,10 @@ header section img {
   aspect-ratio: 568/595;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 header .contenedor_texto_header {
   height: 100%;
@@ -503,10 +523,10 @@ header .contenedor_texto_header .contenedor_botones_header a {
   }
 }
 .fondo {
-  background-image: url("../img/webp/fondo.webp");
+  background-image: url("../img/webp/fondo2.webp");
   background-repeat: repeat space;
-  -webkit-animation: moveBackground 1000s linear infinite;
-          animation: moveBackground 1000s linear infinite;
+  -webkit-animation: moveBackground 1800s linear infinite;
+          animation: moveBackground 1800s linear infinite;
 }
 
 .portafolio_contenedor {
@@ -572,6 +592,10 @@ header .contenedor_texto_header .contenedor_botones_header a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .portafolio_card .contenedor_header_tecnologias {
   z-index: -10;
@@ -706,9 +730,33 @@ header .contenedor_texto_header .contenedor_botones_header a {
           flex-direction: column;
   visibility: hidden;
 }
+.portafolio_back .contenido_back ul.estiloLista {
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
 .portafolio_back .contenedor_texto_back {
   max-height: calc(100% - 2.5em);
   overflow: scroll;
+}
+.portafolio_back .parrafoLink {
+  text-align: left;
+}
+.portafolio_back .parrafoLink a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: rgba(238, 238, 238, 0.8);
+}
+.portafolio_back .parrafoLink a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
 }
 .portafolio_back button {
   margin-top: 20px;
@@ -740,7 +788,8 @@ header .contenedor_texto_header .contenedor_botones_header a {
             flex-direction: column;
     gap: 15px;
   }
-  .portafolio_card .portafolio_botones .botones_ver button, .portafolio_card .portafolio_botones .botones_ver a {
+  .portafolio_card .portafolio_botones .botones_ver button,
+  .portafolio_card .portafolio_botones .botones_ver a {
     font-size: 1em;
     width: 100%;
   }
@@ -866,6 +915,10 @@ header .contenedor_texto_header .contenedor_botones_header a {
   border: 3px solid #44355b;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .habilidades .card_lenguaje img {
   aspect-ratio: 1/1;
@@ -981,6 +1034,10 @@ header .contenedor_texto_header .contenedor_botones_header a {
   -webkit-filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.1647058824));
           filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.1647058824));
   aspect-ratio: 59/50;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .sobre_mi .comilla_arriba {
   top: -20px;
@@ -1075,6 +1132,10 @@ header .contenedor_texto_header .contenedor_botones_header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .contacto .metodo .logo_aplicacion {
   padding-right: 15px;

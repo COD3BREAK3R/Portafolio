@@ -43,7 +43,8 @@
         border          : 3px solid $english-violet;
         position        : relative;
         overflow        : hidden;
-
+        user-select: none;
+        
         img {
             aspect-ratio: 1/1;
         }

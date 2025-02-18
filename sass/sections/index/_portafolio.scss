@@ -8,10 +8,10 @@
     }
 }
 
-.fondo{
-    background-image : url('../img/webp/fondo.webp');
+.fondo {
+    background-image : url('../img/webp/fondo2.webp');
     background-repeat: repeat space;
-    animation        : moveBackground 1000s linear infinite;
+    animation        : moveBackground 1800s linear infinite;
 }
 
 .portafolio_contenedor {
@@ -63,6 +63,7 @@
     flex-direction : column;
 
     justify-content: space-between;
+    user-select    : none;
 
     .contenedor_header_tecnologias {
         z-index: -10;
@@ -137,17 +138,17 @@
             display      : flex;
             gap          : 20px;
             margin-bottom: 15px;
-             
+
             a {
                 text-decoration: none;
-                width: 50%;
+                width          : 50%;
                 @extend .boton_secundario;
             }
 
-            a.solitario{
+            a.solitario {
                 width: 100%;
             }
-            
+
         }
 
         button {
@@ -184,7 +185,7 @@
         font-weight  : bold;
         margin-bottom: 20px;
     }
-
+    
     .contenedor_portafolio_back {
         overflow: hidden;
     }
@@ -195,11 +196,32 @@
         display       : flex;
         flex-direction: column;
         visibility    : hidden;
+
+        ul.estiloLista {
+            padding-left  : 20px;
+            display       : flex;
+            flex-direction: column;
+            gap           : 10px;
+        }
     }
 
     .contenedor_texto_back {
         max-height: calc(100% - 2.5em);
         overflow  : scroll;
+    }
+
+    .parrafoLink {
+        text-align: left;
+
+        a {
+            transition: all 0.3s;
+            color     : $blanco;
+
+            &:hover {
+                transition: all 0.3s;
+                color     : white;
+            }
+        }
     }
 
     button {
@@ -247,7 +269,8 @@
             flex-direction: column;
             gap           : 15px;
 
-            button, a{
+            button,
+            a {
                 font-size: 1em;
                 width    : 100%;
             }

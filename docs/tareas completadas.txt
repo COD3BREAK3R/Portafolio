@@ -1,0 +1,147 @@
+0- Planear cómo se desarrollaría el proyecto y escoger las tecnologías de React y Laravel para el mismo
+  
+1- Crear la barra de navegación para escritorio, tablet y móvil con todos sus elementos
+1.1- Cerrar el menú movil al hacer clic en un link o cambiar la ventana de tamaño
+  
+2- Crear el Menú de Home para escritorio, tablet y móvil
+2.1- Buscar los iconos
+2.2-  Ajustar el tamaño de los iconos, del texto y disposición de las categorías según la pantalla
+  
+3- Agregar la navegación instantánea entre rutas
+  
+4- Crear los formularios de login y registro garantizando que se vean bien en todas las pantallas
+4.1- Validar los datsos que introduce el usuario para el login y el registro
+4.2- Evitar que el usuario envíe múltiples peticiones seguidas de login o registro si ya envía una
+4.3- Mostrar la ventana de modal que indica si el registro o el incio de sesión fue exitoso o no
+  
+5- Crear la base de datos y estructura lógica del backend para poder guardar los registros e incio de sesión de los usuarios
+5.1- Crear la lógica de inicio de sesión en el backend
+5.2- Crear la lógica de cierre de sesión en el backend
+5.3- Devolver una cookie http only con el token de sesión y su expiración a 7 días máximo
+5.4- Crear los mensajes de éxito y error para el login y registro
+5.5- Validar que el usuario envie la cookie para las secciones del backend que lo requieran
+5.6- Validar que el token de la cookie sea válido y no haya expirado para las secciones del backend que lo requieran
+ 
+6- Crear la lógica para mostrar los botones correspondientes en el menú de navegación al iniciar sesión
+6.1- Verificar si el usuario es administrador o no y mostrar los respectivos botones en base a ello
+6.2- Permitir que la sesión se mantenga activa al cambiar entre páginas, recargar la página o al volver a abrir el navegador
+6.3- Crear la ruta de cierre de sesión la cual muestre si fue exitosa o no la operación y permita redirigir al usuario al home al finalizar la operación
+6.4- Validar que la sesión aún sea válida al recargar la página o al transcurrir un tiempo en la misma para mostrar los botones correspondientes según el caso.
+
+7- Adquirir un hosting de pago en namecheap para poder subir el backend de laravel
+7.1- Desplegar el proyecto en el hosting
+7.2- Configurar el hosting 
+7.3- Solucionar incompatibilidades del proyecto respecto al hosting
+
+8- Crear el formulario de publicar anuncio
+8.1- Validar que el formulario solo sea accesible si se ha iniciado sesión 
+8.2- Redirigir al usuario a la página de login si intenta acceder a la ruta del formulario para publicar un anuncio sin haber iniciado sesión
+8.3- Mostrar sólo la opción de publicar un anuncio en la categoría de noticias si se ha iniciado sesión como administrador
+
+9- Mejoras y correcciones de errores
+
+10- Crear la lógica de validación del formulario en el front-end
+10.1- Comprimir las imágenes que se cargan al formulario para optimizar la carga de las mismas y ahorrar recursos en el hosting, las imágenes se comprimen a 120KB máximo y un tamaño máximo de 1000 pixeles.
+10.2- Crear la lógica de validación de los datos del formulario en el back-end
+10.3- Crear la lógica de inserción de datos del formulario en el back-end
+10.4- Devolver el ID del anuncio al ser insertado por un usuario común para que este contacte al administrador y apruebe su anuncio
+10.5- Mostrar en el front-end el mensaje de anuncio pendiente a publicar exitosamente un anuncio que debe ser aprobado por el administrador.
+10.6- Incluir un botón que redirige al contacto de WhatsApp del administrador con un mensaje pre-configurado que incluye el ID del anuncio
+
+11- Crear la parte visual que muestra las tarjetas de los anuncios en la sección de Mis Anuncios y su adaptación visual para diferentes formatos de pantalla: Escritorio, Tablet, Móvil
+11.1- Crear la parte visual para la paginación de anuncios y adaptar la interfaz a los diferentes formatos de pantalla (Escritorio, Tablet, Móvil)
+11.2- Crear la lógica de paginación en el front-end
+11.3- Permitir acceder a una página de anuncios mediante la URL
+11.4- Actualizar la URL al cambiar de página
+11.5- Permitir el cambio de página de forma directa al escribir el número de la página dentro del componente de paginación
+11.6- Crear la lógica de paginación en el back-end
+11.7- Validar el token de sesión en el back-end para solo devolver los anuncios si ha iniciado sesión
+11.8- Devolver solo los anuncios que corresponden al usuario que solicita la paginación
+11.9- Devolver la última página si el usuario solicita una página mayor a la que corresponde según el número de anuncios publicado por el usuario
+11.10- Mostrar en el front-end la página actual, el número de páginas y el total de anuncios, devolver 15 anuncios por página
+11.11- Creación del componente que muestra el error al cargar los anuncios en caso de que exista un error
+11.12- Creación del componente que indica que se están cargando los anuncios y mostrarlo al cambiar de página o eliminar un anuncio
+11.13- Mostrar los anuncios de forma tal que los últimos sean los primeros en verse
+
+12.1- Creación de la parte visual botones para subir al tope de la página o al fondo, útiles si el usuario desea ir directamente a la paginación sin tener que desplazarse manualmente o al tope de la lista de anuncios,
+12.2- Creación de la lógica para los botones de subir al tope o al fondo de la página
+12.3- Ocultar el botón de subir al tope si la barra de scroll está por encima del 10% del total. Ocultar el botón de bajar al fondo de la página si el scroll está por debajo del 10% del total
+12.4- Adaptar el tamaño de los botones en dispositivos móviles
+
+13- Creación del botón para eliminar el anuncio del usuario
+13.1- Creación de la lógica en el front-end para solicitar la eliminación de un anuncio por parte del usuario
+13.2- Creación de la lógica en el back-end para eliminar el anuncio solicitado por el usuario si este corresponde al mismo y si su sesión es válida
+13.3- Devolver los errores al eliminar si existen o indicar que la eliminación ha sido exitosa
+
+14- Añadir los botones para aprobar y denegar anuncios
+14.1 Agregar la lógica del front-end para aprobar y denegar anuncios
+14.2 Mostrar mensajes de error si existen al intentar aprobar o denegar una anuncio
+14.3 Recargar los datos de la página al aprobar o denegar una anuncio satisfactoriamente
+14.5 Crear la lógica del back-end para aprobar y denegar anuncios
+
+15- Crear la parte visual el buscador de anuncios por ID
+15.1 Validar que solo se introduzca un número entero positivo al escribir en el buscador
+15.2 Indicar error en el buscador al intentar escribir un número no válido
+15.3 Mostrar el anuncio encontrado o un error en caso de que no se haya podido recuperar
+15.4 Mostrar el botón para deshacer la búsqueda una vez realizada
+15.5 Función para deshacer la búsqueda al dejar en blanco el número en el buscador y presionar el botón de buscar
+15.6 Lógica del back-end para encontrar un anuncio
+15.7 Validar que sea un anuncio no aprobado, en caso contrario devolver un error
+
+16- Crear las rutas del front-end para acceder a un anuncio por su ID
+16.1 Mostrar indicador de carga al intentar obtener los datos del anuncio
+16.2 Mostrar un mensaje de error en caso de que no se hayan podido obtener los datos del anuncio
+16.3 Crear la parte visual del anuncio
+16.4 Crear el slider para mostrar las fotos del anuncio
+16.5 Crear la lógica de los botones del slider para permitir avanzar mediante los botones lateral y cambiar de imagen tocando los círculos pequeños
+16.6 Hacer que el slider sea infinito (al llegar a la última imagen de cualquier dirección cambia a la última o a la primera de forma fluida e indicando que es la última imagen)
+16.7 Crear la galería de imágenes para el slider
+16.8 Mostrar en la galería a pantalla completa la imagen que el usuario ha seleccionado a un ancho máximo de 1000 píxeles
+16.9 Botón para cerrar la galería y reutilización de la lógica del slider, por lo que la imagen mostrada en la galería está sincronizada con la del slider
+16.10 Lógica del back-end para mostrar los datos del anuncio
+16.10 Garantizar que solamente cualquier usuario puede ver el anuncio si ha sido aprobado por un administrador, en caso contrario, solamente puede ver el anuncio el administrador y el usuario que publicó el anuncio estando pendiente de aprobación
+16.11 Devolver un mensaje de error si un usuario no autorizado intenta acceder a un anuncio que no ha sido aprobado y al cual no tiene permisos para visualizar
+
+17- Lógica para mostrar las monedas de euros y dólares en singular o plural según corresponda en los lugares que se visualiza el precio, ejemplo: 1 euro, 2 euros, 1 dólar, 2 dólares
+
+18 - Agregada la barra de búsqueda en la pantalla principal para dispositivos móviles y tablets
+
+19- Optimización en la lógica del back-end para validar si el usuario es administrador o no en las rutas qué requieren haber iniciado sesión
+
+20- Creación de un middleware en el backend el cual hace lo siguiente: al acceder a una ruta que carga anuncios elimina los anuncios que han expirado, solamente se vuelve a ejecutar si han pasado más de 5 minutos, lo cual ayuda a evitar una sobrecarga del servidor
+
+21- Creación de la parte visual del frontend para subir publicidad. 
+21.1- Comprimir las imágenes a una máximo de 120 KB si exceden este tamaño
+21.2- Permitir que solo se suba una imagen o un video en mp4 para la publicidad principal
+21.3- Permitir cambiar la publicidad seleccionada antes de subirla
+21.4- Mostrar mensajes de error en caso de que existan al intentar obtener los datos de la página para gestionar publicidad o si ocurriese un error al intentar subir la publicidad principal
+21.5- Lógica del backend para subir la publicidad principal y validar el tipo de archivo
+21.6- Lógica para validar si ya existe una publicidad principal y no permitir subir otra en tal caso a menos que se elimine la actual 
+21.7- Lógica para eliminar de la base de datos y el servidor la publicidad principal
+21.8- Mostrar mensajes de error o éxito con las operaciones de subir o eliminar la publicidad principal
+21.9- Mostrar la publicidad principal en la página de inicio en caso de que exista y que esta se adapte correctamente al ancho de la pantalla
+
+22- Añadir al formulario de publicar anuncios la categoría de publicidad para poder subir publicidad, la publicidad secundaria tiene las mismas características pero no posee fecha de expiración.
+22.1- Añadir la lógica del backend para permitir que solo el administrador pueda subir publicidad secundaria 
+22.2- Mostrar las publicidades secundarias y la opción de eliminar cada una en la página de gestionar anuncios
+22.3- Mostrar mensajes de errores si existieran al intentar eliminar una publicidad secundaria
+22.4- Crear una ruta independiente para las publicidades secundarias que permita visualizar todo su contenido tal y como sucede con los anuncios
+
+23-Crear una ruta para mostrar los resultados de búsqueda y la lógica del frontend de la misma así como su parte visual
+23.1- Al seleccionar una categoría dirigir al usuario a la ruta de búsqueda, actualizar el selector de categoría y cargar los anuncios correspondientes a la categoría seleccionada
+23.2- Al cambiar las opciones de los selectores para categoría u 'ordenar por' actualizar la URL del navegador
+23.3- Actualizar los selectores en base a los parámetros de la URL y permitir búsquedas directas mediante una URL
+24.4- Mostrar en el placeholder de la barra de búsqueda la categoría en que se realiza la búsqueda (ejemplo: 'Buscar en la categoría Noticias') si es que existe una categoría seleccionada, de lo contrario se muestra en el placeholder: 'Buscar en el sitio...'
+24.5- Actualizar la URL al escribir en el buscador y actualizar el texto mostrado en el buscador en base a la url al cargar la página si es que existe una búsqueda
+24.5- Lógica del backend para validar los parámetros de búsqueda enviados por el usuario al realizar una búsqueda,
+24.6- Lógica del backend para ordenar los anuncios por relevancia al realizar una búsqueda por defecto, las palabras que coinciden en el título valen el doble que las que coinciden en el cuerpo del anuncio
+24.7- Lógica del backend para ordenar los resultados por fecha antigua, reciente o precio mayor y menor
+24.8- Mostrar mensajes de error si existieran
+
+25- Al realizar una búsqueda desde cualquiera de los buscadores externos a la página de búsqueda redirigir a la misma y mostrar los resultados de búsqueda
+
+26- Mejorada la experiencia en el formulario de publicar anuncio en caso de errores, haciendo que se desplace la pantalla completamente hacia arriba y muestre un mensaje debajo del título indicando que se revisen los errores
+
+27- Añadido un favicon a la web
+
+28- Ajustes, correcciones y mejoras

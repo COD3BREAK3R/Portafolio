@@ -72,8 +72,9 @@ main {
 
 .seccion_intro {
     h2 {
-        font-size: 2.5em;
-        color    : lighten($purpura-logo, 5);
+        user-select: none;
+        font-size  : 2.5em;
+        color      : lighten($purpura-logo, 5);
 
         @media (width < #{$md}) {
             font-size: 1.8em;

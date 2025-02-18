@@ -40,6 +40,7 @@
     .metodo {
         display    : flex;
         align-items: center;
+        user-select: none;
 
         .logo_aplicacion {
             padding-right: 15px;
@@ -132,8 +133,8 @@
         gap: 30px;
 
         &__seccion {
-            align-items   : center;
-            gap           : 30px;
+            align-items: center;
+            gap        : 30px;
         }
 
         .metodo {
@@ -173,12 +174,12 @@
     .contacto {
 
         .metodo {
-            max-width: 106px;
+            max-width     : 106px;
             flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            align-items   : center;
+            gap           : 10px;
 
-            .logo_aplicacion{
+            .logo_aplicacion {
                 padding-right: 0;
             }
         }
@@ -196,17 +197,17 @@
 @media (width <=#{320px}) {
     .contacto {
 
-        &__seccion{
+        &__seccion {
             flex-direction: column;
         }
 
         .metodo {
-            max-width: max-content;
+            max-width     : max-content;
             flex-direction: row;
-            align-items: center;
-            gap: 10px;
+            align-items   : center;
+            gap           : 10px;
 
-            .logo_aplicacion{
+            .logo_aplicacion {
                 padding-right: 0;
             }
         }

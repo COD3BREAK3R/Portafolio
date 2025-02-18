@@ -10,6 +10,7 @@
     cursor         : pointer;
     color          : $blanco;
     box-shadow     : 0px 0px 0px 0px $purpura-logo;
+    user-select    : none;
 
     a {
         text-decoration: none;
@@ -55,10 +56,11 @@ header {
         align-items    : center;
 
         img {
-            width: 568px;
+            width       : 568px;
             max-width   : 50%;
             aspect-ratio: 568/595;
-            object-fit: contain;
+            object-fit  : contain;
+            user-select : none;
         }
     }
 
@@ -111,7 +113,7 @@ header {
 
 @media (width >#{$md}) {
     header section {
-        margin-top: 30px;
+        margin-top   : 30px;
         margin-bottom: 20px;
     }
 }
